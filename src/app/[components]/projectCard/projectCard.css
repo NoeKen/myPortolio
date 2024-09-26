@@ -1,0 +1,38 @@
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin: 16px;
+  text-align: center;
+  background-color: #fff;
+}
+.project-content {
+  padding: 16px;
+}
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-title {
+  font-size: 1.5em;
+  margin: 12px 0;
+}
+
+.project-description {
+  font-size: 1em;
+  color: #555;
+}
+
+.project-technologies {
+  margin-top: 10px;
+}
+
+.technology {
+  /* display: inline-block; */
+  margin: 2px;
+  padding: 4px 4px;
+  /* background-color: #007BFF; */
+  color: #007bff;
+  /* border-radius: 4px; */
+}

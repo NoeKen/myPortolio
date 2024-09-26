@@ -8,9 +8,22 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // colors: {
+      //   background: "var(--background)",
+      //   foreground: "var(--foreground)",
+      // },
+      fontFamily: {
+        roboto: ['Roboto', 'sans-serif'],
+        ubuntu: ['Ubuntu', 'sans-serif'],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: '#f5f5f5', // soft white background
+        secondary: '#333333', // subtle dark text color
+        accent: '#0066ff', // cool accent color
+      },
+      spacing: {
+        '1/2': '50%',
+        '3/4': '75%',
       },
     },
   },
