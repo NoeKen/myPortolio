@@ -1,9 +1,13 @@
 // app/layout.js
-import './globals.css';
-import './animations.css';
-import NavBar from '@/app/[components]/navBar';
-import Header from '@/app/[components]/Header';
 import Footer from '@/app/[components]/footer/Footer';
+import NavBar from '@/app/[components]/navBar/navBar';
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
+import './animations.css';
+import './globals.css';
+
 
 export const metadata = {
   title: 'Portfolio - Aurel Noe Kenfack',
@@ -16,7 +20,7 @@ export default function RootLayout({ children }) {
       <body>
         <div className="content-wrapper">
           <NavBar />
-          <Header />
+          {/* <Header /> */}
           <main className="main-content">{children}</main>
           <Footer />
         </div>

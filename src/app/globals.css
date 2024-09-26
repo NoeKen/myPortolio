@@ -14,7 +14,7 @@ body {
   left: 0;
   right: 0;
   height: 60px;
-  background-color: #fff;
+  background-color: #3e3e3e;
   border-bottom: 1px solid #eaeaea;
   display: flex;
   align-items: center;
@@ -25,17 +25,20 @@ body {
 .nav-link {
   margin: 0 15px;
   font-size: 1.1rem;
-  color: #0070f3;
-  text-decoration: none;
+  color: #ffffff;
+  /* text-decoration: none; */
 }
 
 .nav-link:hover {
-  color: #005bb5;
+  /* color: #00aaff; */
+  text-decoration: dashed;
+  text-decoration-color: red;
+
 }
 
 .header {
   padding: 150px 0;
-  text-align: center;
+  /* text-align: center; */
   background-color: #f7f7f7;
 }
 

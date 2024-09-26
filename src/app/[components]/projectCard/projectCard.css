@@ -29,10 +29,13 @@
 }
 
 .technology {
+    /* font-size: 8px; */
   /* display: inline-block; */
   margin: 2px;
   padding: 4px 4px;
-  /* background-color: #007BFF; */
-  color: #007bff;
-  /* border-radius: 4px; */
+  /* background-color: #0fca76; */
+  /* color: #007bff; */
+  /* border: 1px solid ;
+  border-radius: 5px;
+  border-color: aqua; */
 }

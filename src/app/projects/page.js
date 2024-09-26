@@ -6,7 +6,7 @@ export default function Projects() {
         {
             image: './assets/conges.png', // Remplace par le chemin de l'image de ton projet EchoArt
             title: 'Plateforme de gestion de congés',
-            description: 'Application Power Apps pour le suivi des congés.',
+            description: 'Applications Power Apps pour la demande, gestion et suivi des congés, avec automatisations et envoie de mails.',
             // title: 'EchoArt',
             // description: 'Plateforme de partage d\'images captivantes d\'animaux, permettant aux utilisateurs de télécharger et de partager leurs œuvres.',
             technologies: ['Power Apps', 'Power Automate', 'SharePoint', 'Power FX'],
