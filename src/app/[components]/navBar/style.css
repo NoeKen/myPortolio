@@ -3,7 +3,7 @@
   position: sticky;
   top: 0;
   background-color: #fff;
-  padding: 1rem 2rem;
+  padding: 0rem 1rem 0rem 1rem ;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -76,7 +76,7 @@
 
 .social-link {
   margin-left: 1rem;
-  color: #333;
+  color: #e2e2e2;
   transition: color 0.3s ease;
 }
 

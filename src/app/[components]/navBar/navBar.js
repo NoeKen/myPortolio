@@ -52,7 +52,7 @@ export default function Navbar() {
 
       {/* Bouton pour ouvrir/fermer le menu sur les petits écrans */}
       <button className="menu-toggle" onClick={toggleMenu}>
-        {menuOpen ? <FaTimes /> : <FaBars />}
+        {menuOpen ? <FaTimes color="white" /> : <FaBars color="white"  />}
       </button>
 
       {/* Menu de navigation */}
@@ -93,30 +93,30 @@ export default function Navbar() {
 
       {/* Icônes des réseaux sociaux */}
       <div className="navbar-socials">
-        <Typography
-          href="https://github.com/username"
+        <a
+          href="https://github.com/NoeKen"
           target="_blank"
           rel="noopener noreferrer"
           className="social-link"
         >
           <FaGithub className="social-icon" />
-        </Typography>
-        <Typography
-          href="https://linkedin.com/in/username"
+        </a>
+        <a
+          href="www.linkedin.com/in/aurel-noe-kenfack-b137b01a2"
           target="_blank"
           rel="noopener noreferrer"
           className="social-link"
         >
           <FaLinkedin className="social-icon" />
-        </Typography>
-        <Typography
+        </a>
+        {/* <Typography
           href="https://twitter.com/username"
           target="_blank"
           rel="noopener noreferrer"
           className="social-link"
         >
           <FaTwitter className="social-icon" />
-        </Typography>
+        </Typography> */}
       </div>
     </nav>
   );

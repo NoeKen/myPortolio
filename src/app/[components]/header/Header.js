@@ -1,6 +1,6 @@
 import { Box, Button, Grid2, Typography } from "@mui/material";
 import theme from "../../[constants]/theme";
-
+import "./style.css"
 // app/components/Header.js
 export default function Header() {
   return (
