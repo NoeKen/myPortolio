@@ -1,7 +1,6 @@
-import { Box } from "@mui/material";
-import Header from "./[components]/header/Header";
 import Formation from "./[components]/formation/formation";
-import Skills from "./skills/page"
+import Header from "./[components]/header/Header";
+import Skills from "./skills/page";
 
 // app/page.js
 export default function Home() {
