@@ -122,11 +122,12 @@ const Skills = () => {
           fontSize: theme.fontSize.content,
         }}
       >
-        Au fil des années, j&apos;ai développé un ensemble varié de compétences
+        
+        {/* Au fil des années, j&apos;ai développé un ensemble varié de compétences
         techniques qui me permettent de relever des défis complexes dans le
         développement web, mobile, et les plateformes low-code. Voici un aperçu
         de mes compétences et de leur niveau de maîtrise dans différents
-        domaines.
+        domaines. */}
       </Typography>
       <Grid container spacing={3}>
         {skillsData.map((category, index) => (

@@ -39,7 +39,7 @@ const Formation = () => {
           fontSize: theme.fontSize.content,
         }}
       >
-        Ma formation académique
+        Mes formations académiques
         {/* Mon parcours éducatif m&apos;a permis d&apos;acquérir les bases solides et les
         compétences avancées nécessaires pour exceller dans le développement
         d&apos;applications et l&apos;ingénierie logicielle. Chaque étape de ma formation

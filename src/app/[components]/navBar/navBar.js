@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa"; // Icônes
 import "./style.css";
 
-export default function Navbar() {
+const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -117,3 +117,5 @@ export default function Navbar() {
     </nav>
   );
 }
+
+export default Navbar;
