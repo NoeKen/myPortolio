@@ -77,12 +77,13 @@
 .social-link {
   margin-left: 1rem;
   color: #e2e2e2;
-  transition: color 0.3s ease;
+  transition: color 0.6s ease;
 }
 
 .social-link:hover {
   color: #97f1ff;
   cursor: pointer;
+  transform: translateY(-3px);
 }
 
 .social-icon {

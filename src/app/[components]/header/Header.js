@@ -35,11 +35,12 @@ export default function Header() {
             {/* <Typography sx={{ fontSize: theme.fontSize.headerTitle }}>
               Hey, Salut
             </Typography> */}
-            <section style={{ textAlign: "center" }}>
+            <Box style={{ textAlign: "center" }}>
               <h1
                 style={{
                   fontSize: theme.fontSize.headerTitle,
                   marginBottom: "0.5rem",
+                  marginTop:-2
                 }}
               >
                 Aurel Noe Kenfack
@@ -61,8 +62,8 @@ export default function Header() {
                   En savoir plus
                 </a>
               </p> */}
-            </section>
-            <section style={{ textAlign: "center" }}>
+            </Box>
+            <Box style={{ textAlign: "center" }}>
               <Typography>
                 Développeur Power Apps junior avec plus de 3 ans d'expérience
                 dans le développement d’applications web et mobiles, et
@@ -76,12 +77,12 @@ export default function Header() {
               </Typography>
               <Button
                 variant="contained"
-                color="success"
-                sx={{ mx: 2, my: 2, borderRadius: 50, width: "80%" }}
+                // color="success"
+                sx={{ mx: 2, my: 2, borderRadius: 50, width: "80%" , bgcolor: theme.colors.primary}}
               >
                 Mon CV
               </Button>
-            </section>
+            </Box>
           </Grid2>
         </Grid2>
       </Box>

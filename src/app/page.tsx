@@ -1,11 +1,15 @@
 import { Box } from "@mui/material";
 import Header from "./[components]/header/Header";
+import Formation from "./[components]/formation/formation";
+import Skills from "./skills/page"
 
 // app/page.js
 export default function Home() {
   return (
     <>
       <Header />
+      <Formation/>
+      <Skills/>
       <Box component="section" sx={{ p: 2 }}>
         <section style={{ padding: "2rem", textAlign: "center" }}>
           <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>
