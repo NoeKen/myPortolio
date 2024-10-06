@@ -1,6 +1,6 @@
 // app/layout.js
-import Footer from '@/app/[components]/footer/Footer';
-import NavBar from '@/app/[components]/navBar/navBar';
+import Footer from './[components]/footer/Footer';
+import NavBar from './[components]/navBar/navBar';
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';

@@ -10,7 +10,7 @@ export default function Home() {
       <Header />
       <Formation/>
       <Skills/>
-      <Box component="section" sx={{ p: 2 }}>
+      {/* <Box component="section" sx={{ p: 2 }}>
         <section style={{ padding: "2rem", textAlign: "center" }}>
           <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>
             Aurel Noe Kenfack
@@ -29,7 +29,7 @@ export default function Home() {
             </a>
           </p>
         </section>
-      </Box>
+      </Box> */}
     </>
   );
 }
