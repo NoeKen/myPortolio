@@ -1,23 +1,23 @@
 "use client";
 import React from "react";
 import { Box, Typography, Grid2, Card, CardContent } from "@mui/material";
-import { Line } from "react-chartjs-2";
+// import { Line } from "react-chartjs-2";
 import "chart.js/auto";
 import theme from "@/app/[constants]/theme";
 
-const educationData = {
-  labels: ["Baccalauréat", "Maîtrise", "DESS", "Maîtrise au Canada"],
-  datasets: [
-    {
-      label: "Mon Parcours Éducatif",
-      data: [2015, 2019, 2024, 2025], // Exemples d'années de formation
-      backgroundColor: "rgba(75,192,192,0.2)",
-      borderColor: "rgba(75,192,192,1)",
-      borderWidth: 2,
-      fill: true,
-    },
-  ],
-};
+// const educationData = {
+//   labels: ["Baccalauréat", "Maîtrise", "DESS", "Maîtrise au Canada"],
+//   datasets: [
+//     {
+//       label: "Mon Parcours Éducatif",
+//       data: [2015, 2019, 2024, 2025], // Exemples d&apos;années de formation
+//       backgroundColor: "rgba(75,192,192,0.2)",
+//       borderColor: "rgba(75,192,192,1)",
+//       borderWidth: 2,
+//       fill: true,
+//     },
+//   ],
+// };
 
 const Formation = () => {
   return (
@@ -28,10 +28,23 @@ const Formation = () => {
         align="center"
         sx={{ fontFamily: theme.fonts.main }}
       >
-        Mon Parcours Éducatif
+        FORMATION ACADÉMIQUE
       </Typography>
-      <Typography gutterBottom align="center" sx={{ mb: 3, fontFamily:theme.fonts.main, fontSize: theme.fontSize.content }}>
-        "Mon parcours éducatif m'a permis d'acquérir les bases solides et les compétences avancées nécessaires pour exceller dans le développement d'applications et l'ingénierie logicielle. Chaque étape de ma formation a renforcé ma passion pour les nouvelles technologies et mon envie d'innover."
+      <Typography
+        gutterBottom
+        align="center"
+        sx={{
+          mb: 3,
+          fontFamily: theme.fonts.main,
+          fontSize: theme.fontSize.content,
+        }}
+      >
+        Ma formation académique
+        {/* Mon parcours éducatif m&apos;a permis d&apos;acquérir les bases solides et les
+        compétences avancées nécessaires pour exceller dans le développement
+        d&apos;applications et l&apos;ingénierie logicielle. Chaque étape de ma formation
+        a renforcé ma passion pour les nouvelles technologies et mon envie
+        d&apos;innover. */}
       </Typography>
       <Grid2 container spacing={3}>
         {/* Formation 1 */}
@@ -87,7 +100,7 @@ const Formation = () => {
 
         {/* Graphique */}
         {/* <Grid2 item xs={12}>
-          <Box sx={{ maxWidth: 700, margin: '0 auto' }}>
+          <Box sx={{ maxWidth: 700, margin: &apos;0 auto&apos; }}>
             <Line data={educationData} />
           </Box>
         </Grid2> */}

@@ -1,6 +1,6 @@
 import { Box, Button, Grid2, Typography } from "@mui/material";
 import theme from "../../[constants]/theme";
-import "./style.css"
+import "./style.css";
 // app/components/Header.js
 export default function Header() {
   return (
@@ -40,7 +40,7 @@ export default function Header() {
                 style={{
                   fontSize: theme.fontSize.headerTitle,
                   marginBottom: "0.5rem",
-                  marginTop:-2
+                  marginTop: -2,
                 }}
               >
                 Aurel Noe Kenfack
@@ -63,9 +63,9 @@ export default function Header() {
                 </a>
               </p> */}
             </Box>
-            <Box style={{ textAlign: "center" }}>
-              <Typography>
-                Développeur Power Apps junior avec plus de 3 ans d'expérience
+            <Box style={{ textAlign: "justify" }}>
+              <Typography sx={{ fontSize: theme.fontSize.content }}>
+                {/* Développeur Power Apps junior avec plus de 3 ans d&apos;expérience
                 dans le développement d’applications web et mobiles, et
                 spécialisé dans les solutions Microsoft Power Platform. Solides
                 compétences dans la création d’interfaces utilisateur
@@ -73,12 +73,36 @@ export default function Header() {
                 Automate, et la gestion de données via SharePoint et Dataverse.
                 Forte capacité à résoudre des problèmes complexes et à
                 collaborer efficacement en équipe pour répondre aux besoins des
-                utilisateurs.
+                utilisateurs. */}
+                Enthousiaste du développement depuis mon enfance, je suis
+                fasciné par la création d&apos;applications qui transforment des
+                idées en solutions concrètes. Mon parcours a commencé avec le
+                développement d&apos;applications de livraison en utilisant Kotlin,
+                mais c&apos;est grâce à React Native et à l&apos;écosystème Microsoft
+                Power Platform que j&apos;ai vraiment trouvé ma passion pour la
+                création d&apos;applications innovantes.
+                <br /> <br /> En tant que développeur mobile et web, je tire parti de
+                la puissance de React Native pour créer des applications
+                performantes et réactives, tout en utilisant Power Apps pour
+                concevoir des interfaces utilisateur intuitives. Grâce à
+                l&apos;automatisation des processus métiers avec Power Automate,
+                j&apos;optimise l&apos;efficacité des solutions que je développe.
+                <br /><br />  Curieux, rigoureux et toujours en quête d&apos;apprentissage,
+                je suis déterminé à explorer de nouvelles technologies et à
+                améliorer mes compétences. Mon objectif est de créer des
+                expériences mémorables qui allient esthétique et fonctionnalité,
+                tout en contribuant à des projets innovants et stimulants.
               </Typography>
               <Button
                 variant="contained"
                 // color="success"
-                sx={{ mx: 2, my: 2, borderRadius: 50, width: "80%" , bgcolor: theme.colors.primary}}
+                sx={{
+                  mx: 2,
+                  my: 2,
+                  borderRadius: 50,
+                  width: "80%",
+                  bgcolor: theme.colors.primary,
+                }}
               >
                 Mon CV
               </Button>

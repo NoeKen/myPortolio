@@ -1,16 +1,14 @@
 "use client";
-import React, { useState } from "react";
+import SkillModal from "@/app/[components]/skills/skillModal";
 import {
   Box,
-  Typography,
-  Grid,
   Card,
   CardContent,
+  Grid,
   LinearProgress,
-  Dialog,
-  DialogTitle,
-  DialogContent,
+  Typography
 } from "@mui/material";
+import { useState } from "react";
 import theme from "../[constants]/theme";
 
 const skillsData = [
@@ -124,11 +122,11 @@ const Skills = () => {
           fontSize: theme.fontSize.content,
         }}
       >
-        "Au fil des années, j'ai développé un ensemble varié de compétences
+        Au fil des années, j&apos;ai développé un ensemble varié de compétences
         techniques qui me permettent de relever des défis complexes dans le
         développement web, mobile, et les plateformes low-code. Voici un aperçu
         de mes compétences et de leur niveau de maîtrise dans différents
-        domaines."
+        domaines.
       </Typography>
       <Grid container spacing={3}>
         {skillsData.map((category, index) => (
@@ -166,8 +164,12 @@ const Skills = () => {
         ))}
       </Grid>
 
+      {/* Utilisation du composant SkillModal */}
+      <SkillModal open={open} handleClose={handleClose} selectedCategory={selectedCategory} />
+  
+
       {/* Modal for category details */}
-      <Dialog open={open} onClose={handleClose} maxWidth="sm" fullWidth>
+      {/* <Dialog open={open} onClose={handleClose} maxWidth="sm" fullWidth>
         <DialogTitle>{selectedCategory?.category}</DialogTitle>
         <DialogContent>
           {selectedCategory?.skills.map((skill, index) => (
@@ -193,7 +195,7 @@ const Skills = () => {
             </Box>
           ))}
         </DialogContent>
-      </Dialog>
+      </Dialog> */}
     </Box>
   );
 };

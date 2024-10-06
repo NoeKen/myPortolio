@@ -1,19 +1,15 @@
 "use client";
 import theme from "@/app/[constants]/theme";
-import "./style.css";
 import { Typography } from "@mui/material";
 import Link from "next/link";
 import { useState } from "react";
 import {
-  FaHome,
-  FaUser,
-  FaProjectDiagram,
+  FaBars,
   FaGithub,
   FaLinkedin,
-  FaTwitter,
-  FaBars,
-  FaTimes,
+  FaTimes
 } from "react-icons/fa"; // Icônes
+import "./style.css";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
