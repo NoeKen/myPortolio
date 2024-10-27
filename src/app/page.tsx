@@ -3,7 +3,7 @@ import Header from "./[components]/header/Header";
 import Skills from "./skills/page";
 import Projects from "./projects/page"
 import Contact from "./contact/page"
-import Footer from "./[components]/footer/Footer";
+// import Footer from "./[components]/footer/Footer";
 
 // app/page.js
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       <Skills/>
       <Projects/>
       <Contact/>
-      <Footer/>
+      {/* <Footer/> */}
       {/* <Box component="section" sx={{ p: 2 }}>
         <section style={{ padding: "2rem", textAlign: "center" }}>
           <h1 style={{ fontSize: "3rem", marginBottom: "1rem" }}>
