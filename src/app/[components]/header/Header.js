@@ -1,7 +1,6 @@
 import { Box, Button, Grid2, Typography } from "@mui/material";
 import theme from "../../[constants]/theme";
 import "./style.css";
-import Image from "next/image";
 // app/components/Header.js
 export default function Header() {
   return (
@@ -20,7 +19,7 @@ export default function Header() {
                 padding: "2%",
               }}
             >
-              <Image
+              <img
                 src="/assets/profile.jpg"
                 alt="Aurel Noe Kenfack"
                 style={{ width: "100%", borderRadius: 15 }}
