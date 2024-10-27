@@ -42,6 +42,7 @@ export default function Header() {
                   marginBottom: "0.5rem",
                   marginTop: -2,
                 }}
+                id="info"
               >
                 Aurel Noe Kenfack
               </h1>

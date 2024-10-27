@@ -44,7 +44,8 @@ const Navbar = () => {
       {/* Menu de navigation */}
       <ul className={`navbar-menu ${menuOpen ? "open" : ""}`}>
         <li className="nav-item">
-          <Link href="/">
+          {/* <Link href="/"> */}
+          <Link href="#info">
             <Typography
               className="nav-link"
               // sx={{ color: pathname === "/" ? "green" : "white" }} // Mettre en vert si c'est la page active
@@ -54,17 +55,18 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="nav-item">
-          <Link href="/about">
+          <Link href="#skills">
             <Typography
               className="nav-link"
               sx={{ color: isCurrentPage("/about") ? "green" : "white" }} // Couleur verte pour la page active
             >
-              <span>À propos</span>
+              <span>Compétences</span>
             </Typography>
           </Link>
         </li>
         <li className="nav-item">
-          <Link href="/projects">
+          {/* <Link href="/projects"> */}
+          <Link href="#projects">
             <Typography
               className="nav-link"
               sx={{ color: isCurrentPage("/projects") ? "green" : "white" }} // Couleur verte pour la page active
@@ -74,7 +76,8 @@ const Navbar = () => {
           </Link>
         </li>
         <li className="nav-item">
-          <Link href="/contact">
+          {/* <Link href="/contact"> */}
+          <Link href="#contact">
             <Typography
               className="nav-link"
               sx={{ color: isCurrentPage("/contact") ? "green" : "white" }} // Couleur verte pour la page active

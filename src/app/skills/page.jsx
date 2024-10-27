@@ -109,7 +109,7 @@ const Skills = () => {
 
   return (
     <Box sx={{ backgroundColor:theme.colors.bg, padding: 3 }}>
-      <Typography variant="h4" gutterBottom align="center">
+      <Typography variant="h4" gutterBottom align="center" id="skills" >
        COMPETENCES
       </Typography>
       <Typography gutterBottom align="center">

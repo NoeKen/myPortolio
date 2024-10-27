@@ -45,37 +45,40 @@ export default function Projects() {
   ];
 
   return (
-    <Box className="projects-section">
-      <Typography
-        variant="h4"
-        gutterBottom
-        align="center"
-        sx={{ fontFamily: theme.fonts.main, mt: 5 }}
-      >
-        PROJETS CLES
-      </Typography>
-      <Typography
-        sx={{
-          mb: 5,
-          textAlign: "center",
-          fontSize: theme.fontSize.content,
-          fontFamily: theme.fonts.main,
-        }}
-      >
-        Bienvenue sur mon portfolio. Vous trouverez ici une sélection de mes
-        travaux. Explorez mes projets pour en savoir plus.
-      </Typography>
-      <div className="projects-grid">
-        {projects?.map((project, index) => (
-          <ProjectCard
-            key={index}
-            project={project}
-            // title={project.title}
-            // description={project.description}
-            // image={project.image}
-          />
-        ))}
-      </div>
-    </Box>
+    <>
+    <div id="projects"></div>
+      <Box className="projects-section">
+        <Typography
+          variant="h4"
+          gutterBottom
+          align="center"
+          sx={{ fontFamily: theme.fonts.main, mt: 5 }}
+        >
+          PROJETS CLES
+        </Typography>
+        <Typography
+          sx={{
+            mb: 5,
+            textAlign: "center",
+            fontSize: theme.fontSize.content,
+            fontFamily: theme.fonts.main,
+          }}
+        >
+          Bienvenue sur mon portfolio. Vous trouverez ici une sélection de mes
+          travaux. Explorez mes projets pour en savoir plus.
+        </Typography>
+        <div className="projects-grid">
+          {projects?.map((project, index) => (
+            <ProjectCard
+              key={index}
+              project={project}
+              // title={project.title}
+              // description={project.description}
+              // image={project.image}
+            />
+          ))}
+        </div>
+      </Box>
+    </>
   );
 }
