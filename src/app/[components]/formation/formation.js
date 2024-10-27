@@ -46,16 +46,16 @@ const Formation = () => {
         a renforcé ma passion pour les nouvelles technologies et mon envie
         d&apos;innover. */}
       </Typography>
-      <Grid2 container spacing={3}>
+      <Grid2 container spacing={3} style={{textAlign:'center'}}>
         {/* Formation 1 */}
         <Grid2 item size={{ xs: 12, sm: 6, lg: 6 }} md={6}>
           <Card>
-            <CardContent>
+            <CardContent style={{}}>
               <p gutterBottom>
                 <Typography variant="h6" gutterBottom>
                   Attestation de Spécialisation professionnelle
                 </Typography>
-                (Lancement d'une Entreprise)
+                (Lancement d&apos;une Entreprise)
               </p>
               <Typography variant="body2" color="textSecondary">
                 EMICA | Montréal - Canada | 2024
@@ -66,7 +66,7 @@ const Formation = () => {
             </CardContent>
           </Card>
         </Grid2>
-        {/* Formation 1 */}
+        {/* Formation 2 */}
         <Grid2 item size={{ xs: 12, sm: 6, lg: 6 }} md={6}>
           <Card>
             <CardContent>
@@ -86,7 +86,7 @@ const Formation = () => {
           </Card>
         </Grid2>
 
-        {/* Formation 2 */}
+        {/** Formation 3 */}
         <Grid2 item size={{ xs: 12, sm: 6, lg: 6 }} md={6}>
           <Card>
             <CardContent>
@@ -96,7 +96,7 @@ const Formation = () => {
                 </Typography>
                 ICT4D (Information And Communication Technology For Development)
               </p>
-              <Typography variant="body2" color="#61798a" sx={{mt:-3, fontStyle:"italic"}} >
+              <Typography variant="body2" color="#61798a" sx={{mt:-2, fontStyle:"italic"}} >
                 Equivalence du MIFI Québec | 2024
               </Typography>
               <Typography variant="body2" color="textSecondary">

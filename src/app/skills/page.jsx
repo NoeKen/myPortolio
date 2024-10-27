@@ -4,10 +4,9 @@ import {
   Box,
   Card,
   CardContent,
-  Grid,
   Grid2,
   LinearProgress,
-  Typography,
+  Typography
 } from "@mui/material";
 import { useState } from "react";
 import theme from "../[constants]/theme";
@@ -109,7 +108,7 @@ const Skills = () => {
   };
 
   return (
-    <Box sx={{ padding: 3 }}>
+    <Box sx={{ backgroundColor:theme.colors.bg, padding: 3 }}>
       <Typography variant="h4" gutterBottom align="center">
        COMPETENCES
       </Typography>

@@ -3,6 +3,7 @@ const theme = {
         primary: '#007486',
         secondary: '#6c757d',
         text: '#333',
+        bg:'#f7f7f7'
     },
     fonts: {
         main: 'Ubuntu, sans-serif',

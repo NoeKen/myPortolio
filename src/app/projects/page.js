@@ -1,6 +1,6 @@
 // app/projects/page.js
 import ProjectCard from "@/app/[components]/projectCard/ProjectCard";
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import theme from "../[constants]/theme";
 
 export default function Projects() {
@@ -23,24 +23,45 @@ export default function Projects() {
     },
     {
       image: "./assets/conges.png", // Remplace par le chemin de l'image de ton application d'alimentation bio
-      title: "Application d'Alimentation Bio",
+      title: "BeAware",
       description:
-        "Application mobile connectant les consommateurs avec des producteurs locaux d'aliments biologiques.",
-      technologies: ["React Native", "Node.js", "MongoDB"],
+        "Application mobile Android d'aide a la gestion financière, suivi des dépenses quotidiennes, génération et exportation de rapports.",
+      technologies: ["React Native", "Redux", "SQLite"],
     },
-    {
-      image: "./assets/conges.png", // Remplace par le chemin de l'image de ton application de réseau social pour cuisiniers
-      title: "Réseau Social de Cuisiniers",
-      description:
-        "Application mobile pour partager des recettes et promouvoir des marques alimentaires.",
-      technologies: ["React Native", "Firebase", "GraphQL"],
-    },
+    // {
+    //   image: "./assets/conges.png", // Remplace par le chemin de l'image de ton application d'alimentation bio
+    //   title: "Application d'Alimentation Bio",
+    //   description:
+    //     "Application mobile connectant les consommateurs avec des producteurs locaux d'aliments biologiques.",
+    //   technologies: ["React Native", "Node.js", "MongoDB"],
+    // },
+    // {
+    //   image: "./assets/conges.png", // Remplace par le chemin de l'image de ton application de réseau social pour cuisiniers
+    //   title: "Réseau Social de Cuisiniers",
+    //   description:
+    //     "Application mobile pour partager des recettes et promouvoir des marques alimentaires.",
+    //   technologies: ["React Native", "Firebase", "GraphQL"],
+    // },
   ];
 
   return (
-    <>
-      <h1>Mes Projets</h1>
-      <Typography sx={{mb:5, fontSize: theme.fontSize.content, fontFamily: theme.fonts.main}} >
+    <Box className="projects-section">
+      <Typography
+        variant="h4"
+        gutterBottom
+        align="center"
+        sx={{ fontFamily: theme.fonts.main, mt: 5 }}
+      >
+        PROJETS CLES
+      </Typography>
+      <Typography
+        sx={{
+          mb: 5,
+          textAlign: "center",
+          fontSize: theme.fontSize.content,
+          fontFamily: theme.fonts.main,
+        }}
+      >
         Bienvenue sur mon portfolio. Vous trouverez ici une sélection de mes
         travaux. Explorez mes projets pour en savoir plus.
       </Typography>
@@ -55,6 +76,6 @@ export default function Projects() {
           />
         ))}
       </div>
-    </>
+    </Box>
   );
 }

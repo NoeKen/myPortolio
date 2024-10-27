@@ -1,8 +1,8 @@
 import "./footer.css";
  const Footer =()=> {
   return (
-    <footer class="footer">
-      <div class="footer-container">
+    <footer className="footer">
+      {/* <div class="footer-container"> */}
         {/* <div class="contact-info">
           <p>
             Email:{" "}
@@ -26,19 +26,19 @@ import "./footer.css";
             <a href="#contact">Contact</a>
           </li>
         </ul> */}
-        <div class="social-media">
-          <a href="https://linkedin.com" target="_blank">
+        <div className="social-media">
+          <a href="https://linkedin.com/in/aurel-noe-kenfack-b137b01a2" target="_blank">
             LinkedIn
           </a>
-          <a href="https://github.com" target="_blank">
+          <a href="https://github.com/NoeKen" target="_blank">
             GitHub
           </a>
-          <a href="https://twitter.com" target="_blank">
+          {/* <a href="https://twitter.com" target="_blank">
             Twitter
-          </a>
-        </div>
+          </a> */}
+        {/* </div> */}
       </div>
-      <p class="copyright">© 2024 Aurel Noe Kenfack. Tous droits réservés.</p>
+      <p class="copyright">©2024 par Aurel Noe Kenfack. Tous droits réservés.</p>
     </footer>
   );
 }
