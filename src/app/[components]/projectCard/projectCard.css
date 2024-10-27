@@ -1,7 +1,7 @@
 .project-card {
   border: 1px solid #ddd;
   border-radius: 8px;
-  margin: 16px;
+  /* margin: 16px; */
   text-align: center;
   background-color: #fff;
 }

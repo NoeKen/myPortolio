@@ -28,7 +28,7 @@ const Formation = () => {
         align="center"
         sx={{ fontFamily: theme.fonts.main }}
       >
-        FORMATION ACADÉMIQUE
+        FORMATION
       </Typography>
       <Typography
         gutterBottom
@@ -47,6 +47,25 @@ const Formation = () => {
         d&apos;innover. */}
       </Typography>
       <Grid2 container spacing={3}>
+        {/* Formation 1 */}
+        <Grid2 item size={{ xs: 12, sm: 6, lg: 6 }} md={6}>
+          <Card>
+            <CardContent>
+              <p gutterBottom>
+                <Typography variant="h6" gutterBottom>
+                  Attestation de Spécialisation professionnelle
+                </Typography>
+                (Lancement d'une Entreprise)
+              </p>
+              <Typography variant="body2" color="textSecondary">
+                EMICA | Montréal - Canada | 2024
+              </Typography>
+              {/* <Typography variant="body2" color="textSecondary">
+                Yaoundé - Cameroun - 2019
+              </Typography> */}
+            </CardContent>
+          </Card>
+        </Grid2>
         {/* Formation 1 */}
         <Grid2 item size={{ xs: 12, sm: 6, lg: 6 }} md={6}>
           <Card>
@@ -77,6 +96,9 @@ const Formation = () => {
                 </Typography>
                 ICT4D (Information And Communication Technology For Development)
               </p>
+              <Typography variant="body2" color="#61798a" sx={{mt:-3, fontStyle:"italic"}} >
+                Equivalence du MIFI Québec | 2024
+              </Typography>
               <Typography variant="body2" color="textSecondary">
                 Université de Yaoundé 1 | Yaoundé - Cameroun | 2022
               </Typography>

@@ -5,8 +5,9 @@ import {
   Card,
   CardContent,
   Grid,
+  Grid2,
   LinearProgress,
-  Typography
+  Typography,
 } from "@mui/material";
 import { useState } from "react";
 import theme from "../[constants]/theme";
@@ -110,7 +111,10 @@ const Skills = () => {
   return (
     <Box sx={{ padding: 3 }}>
       <Typography variant="h4" gutterBottom align="center">
-        Mes Compétences
+       COMPETENCES
+      </Typography>
+      <Typography gutterBottom align="center">
+        Mes Compétences techniques
       </Typography>
       <Typography
         variant="h5"
@@ -122,32 +126,33 @@ const Skills = () => {
           fontSize: theme.fontSize.content,
         }}
       >
-        
         {/* Au fil des années, j&apos;ai développé un ensemble varié de compétences
         techniques qui me permettent de relever des défis complexes dans le
         développement web, mobile, et les plateformes low-code. Voici un aperçu
         de mes compétences et de leur niveau de maîtrise dans différents
         domaines. */}
       </Typography>
-      <Grid container spacing={3}>
+      <Grid2 container spacing={3}>
         {skillsData.map((category, index) => (
-          <Grid item xs={12} md={6} key={index}>
+          <Grid2 item size={{ xs: 12, sm: 6,md:4, xl: 3 }}  key={index}>
             <Card
               onClick={() => handleClickOpen(category)}
               sx={{ cursor: "pointer" }}
             >
               <CardContent>
                 <Typography variant="h6" gutterBottom>
-                  {category.category}
+                  {category?.category}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" gutterBottom>
-                  {category.details}
+                  {category?.details}
                 </Typography>
                 <Box sx={{ display: "flex", alignItems: "center", mt: 1 }}>
                   <Box sx={{ width: "100%", mr: 1 }}>
                     <LinearProgress
                       variant="determinate"
-                      value={calculateAverageProficiency(category.skills)}
+                      value={calculateAverageProficiency(category?.skills)}
+                      // color="#f4f4f4"
+                      
                     />
                   </Box>
                   <Box sx={{ minWidth: 35 }}>
@@ -155,19 +160,22 @@ const Skills = () => {
                       variant="body2"
                       color="textSecondary"
                     >{`${calculateAverageProficiency(
-                      category.skills
+                      category?.skills
                     )}%`}</Typography>
                   </Box>
                 </Box>
               </CardContent>
             </Card>
-          </Grid>
+          </Grid2>
         ))}
-      </Grid>
+      </Grid2>
 
       {/* Utilisation du composant SkillModal */}
-      <SkillModal open={open} handleClose={handleClose} selectedCategory={selectedCategory} />
-  
+      <SkillModal
+        open={open}
+        handleClose={handleClose}
+        selectedCategory={selectedCategory}
+      />
 
       {/* Modal for category details */}
       {/* <Dialog open={open} onClose={handleClose} maxWidth="sm" fullWidth>

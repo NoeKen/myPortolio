@@ -1,42 +1,114 @@
-"use client"
-import { useState } from 'react';
+"use client";
+import { Typography } from "@mui/material";
+import { useState } from "react";
 
-export default function Contact() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' });
+import "./contact.css";
+const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [openSnackbar, setOpenSnackbar] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(form);
+    // Here you can add logic to send the form data to your backend
+    console.log(formData);
+    setOpenSnackbar(true);
+    setFormData({ name: "", email: "", message: "" }); // Clear the form after submission
+  };
+
+  const handleCloseSnackbar = () => {
+    setOpenSnackbar(false);
   };
 
   return (
-    <div className="min-h-screen bg-primary py-20 flex flex-col items-center">
-      <h2 className="text-4xl font-bold text-secondary mb-6">Contact Me</h2>
-      <form onSubmit={handleSubmit} className="flex flex-col space-y-4 w-full max-w-md">
-        <input
-          type="text"
-          placeholder="Your Name"
-          value={form.name}
-          onChange={(e) => setForm({ ...form, name: e.target.value })}
-          className="p-3 border border-secondary rounded-md text-secondary"
-        />
-        <input
-          type="email"
-          placeholder="Your Email"
-          value={form.email}
-          onChange={(e) => setForm({ ...form, email: e.target.value })}
-          className="p-3 border border-secondary rounded-md text-secondary"
-        />
-        <textarea
-          placeholder="Your Message"
-          value={form.message}
-          onChange={(e) => setForm({ ...form, message: e.target.value })}
-          className="p-3 border border-secondary rounded-md text-secondary"
-        />
-        <button type="submit" className="bg-accent text-white py-3 px-6 rounded-md">
-          Send Message
-        </button>
-      </form>
-    </div>
+    <>
+      <header className="contact-header">
+        <h1>Contactez-nous</h1>
+      </header>
+
+      <div className="container">
+        {/* <h1>Contactez-nous</h1> */}
+        <Typography
+          style={{
+            color: "#",
+            fontSize: 16,
+            fontWeight: "lighter",
+            fontFamily: "roboto",
+            paddingLeft: "15%",
+            paddingRight: "15%",
+            marginBottom: 10,
+            // maxWidth: '70%',
+            textAlign: "center",
+          }}
+        >
+          Si vous avez des questions ou des suggestions, n&apos;hésitez pas à
+          nous contacter via ce formulaire.
+        </Typography>
+
+        <form onSubmit={handleSubmit} className="form">
+          <div className="formGroup">
+            <label htmlFor="name">Nom</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="formGroup">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
+
+          <div className="formGroup">
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              rows="5"
+              required
+            />
+          </div>
+
+          <button type="submit" className="submitButton">
+            Envoyer
+          </button>
+        </form>
+        {/* {success === true && <p className="thankYouMessage">
+            Merci pour votre message. Nous vous répondrons sous peu.
+          </p>}
+        {success === false && (
+          <Typography
+            style={{
+              color: "red",
+            }}
+          >
+            Erreur lors de l&apos;envoi du message.
+          </Typography>
+        )} */}
+      </div>
+    </>
   );
-}
+};
+
+export default Contact;
