@@ -1,10 +1,9 @@
 "use client";
-import theme from "@/app/[constants]/theme";
 import { Typography } from "@mui/material";
 import Link from "next/link";
+import { usePathname } from "next/navigation"; // Importer usePathname
 import { useState } from "react";
 import { FaBars, FaGithub, FaLinkedin, FaTimes } from "react-icons/fa"; // Icônes
-import { usePathname } from "next/navigation"; // Importer usePathname
 import "./style.css";
 
 const Navbar = () => {
