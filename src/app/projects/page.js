@@ -13,7 +13,7 @@ export default function Projects() {
       // title: 'EchoArt',
       // description: 'Plateforme de partage d\'images captivantes d\'animaux, permettant aux utilisateurs de télécharger et de partager leurs œuvres.',
       technologies: ["Power Apps", "Power Automate", "SharePoint", "Power FX"],
-      link:""
+      link: "",
     },
     {
       image: "./assets/conges.png", // Remplace par le chemin de l'image de ton projet ShareSpace
@@ -21,7 +21,7 @@ export default function Projects() {
       description:
         "Une plateforme de petites annonces locales pour la consultation d'événements et la location d'espaces.",
       technologies: ["Next.js", "Firebase", "Tailwind CSS"],
-      link:""
+      link: "",
     },
     {
       image: "./assets/beAware.png", // Remplace par le chemin de l'image de ton application d'alimentation bio
@@ -29,27 +29,13 @@ export default function Projects() {
       description:
         "Application mobile Android d'aide a la gestion financière, suivi des dépenses quotidiennes, génération et exportation de rapports.",
       technologies: ["React Native", "Redux", "SQLite"],
-      link: "https://play.google.com/store/apps/details?id=com.beaware&pcampaignid=web_share"
+      link: "https://play.google.com/store/apps/details?id=com.beaware&pcampaignid=web_share",
     },
-    // {
-    //   image: "./assets/conges.png", // Remplace par le chemin de l'image de ton application d'alimentation bio
-    //   title: "Application d'Alimentation Bio",
-    //   description:
-    //     "Application mobile connectant les consommateurs avec des producteurs locaux d'aliments biologiques.",
-    //   technologies: ["React Native", "Node.js", "MongoDB"],
-    // },
-    // {
-    //   image: "./assets/conges.png", // Remplace par le chemin de l'image de ton application de réseau social pour cuisiniers
-    //   title: "Réseau Social de Cuisiniers",
-    //   description:
-    //     "Application mobile pour partager des recettes et promouvoir des marques alimentaires.",
-    //   technologies: ["React Native", "Firebase", "GraphQL"],
-    // },
   ];
 
   return (
     <>
-    <div id="projects"></div>
+      <div id="projects"></div>
       <Box className="projects-section">
         <Typography
           variant="h4"
@@ -67,9 +53,10 @@ export default function Projects() {
             fontFamily: theme.fonts.main,
           }}
         >
-          Bienvenue sur mon portfolio. Vous trouverez ici une sélection de mes
-          travaux. Explorez mes projets pour en savoir plus.
+          Bienvenue sur mon portfolio. Vous trouverez ici une sélection de
+          quelques un de mes travaux. Explorez mes projets pour en savoir plus.
         </Typography>
+        <Typography style={style.title} >Developpement</Typography>
         <div className="projects-grid">
           {projects?.map((project, index) => (
             <ProjectCard
@@ -81,7 +68,19 @@ export default function Projects() {
             />
           ))}
         </div>
+        <Typography style={style.title}>Design</Typography>
       </Box>
     </>
   );
+}
+
+const style = {
+  title :{
+    fontWeight: 'bold',
+    marginTop: 10,
+    marginBottom : 20,
+    fontSize: theme.fontSize.title,
+    fontFamily: theme.fonts.main,
+    textAlign:"center"
+  }
 }

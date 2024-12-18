@@ -52,7 +52,7 @@ const Contact = () => {
         <h3>Contactez-nous</h3>
       </header> */}
 
-        <Grid2 container spacing={2}>
+        {/* <Grid2 container spacing={2}> */}
           <Grid2
             item
             size={{ xs: 12, sm: 6, md: 6, xl: 6 }}
@@ -109,7 +109,7 @@ const Contact = () => {
               +1 (263) 880-7662
             </Typography>
           </Grid2>
-          <Grid2 item size={{ xs: 12, sm: 6, md: 6, xl: 6 }}>
+          {/* <Grid2 item size={{ xs: 12, sm: 6, md: 6, xl: 6 }}>
             <form onSubmit={handleSubmit} className="form">
               <div className="formGroup">
                 <Typography htmlFor="name">
@@ -204,7 +204,8 @@ const Contact = () => {
             {/* {success === true && <p className="thankYouMessage">
             Merci pour votre message. Nous vous répondrons sous peu.
           </p>}
-        {success === false && (
+          </Grid2> */}
+        {/* {success === false && (
           <Typography
             style={{
               color: "red",
@@ -214,8 +215,7 @@ const Contact = () => {
           </Typography>
         )} */}
             {/* </div> */}
-          </Grid2>
-        </Grid2>
+        {/* </Grid2> */}
       </Box>
     </>
   );
