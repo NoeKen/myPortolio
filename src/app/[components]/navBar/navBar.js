@@ -22,7 +22,7 @@ const Navbar = () => {
       {/* Logo */}
       <div className="navbar-logo">
         <Link href="/">
-          <img src="/assets/NKLogo_L.png" alt="logo" width={150}/>
+          <img src="/assets/monLogo.png" alt="logo" width={40}/>
           {/* <div>
             <Typography
               sx={{

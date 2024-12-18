@@ -53,6 +53,25 @@ const Formation = () => {
             <CardContent style={{}}>
               <p gutterBottom>
                 <Typography variant="h6" gutterBottom>
+                  Attestation d&apos;Etudes Collégiale
+                </Typography>
+                (Analyste Programmeur)
+              </p>
+              <Typography variant="body2" color="textSecondary">
+                Collège Bois-de-Boulogne | Montréal - Canada | <b>en cours</b>
+              </Typography>
+              {/* <Typography variant="body2" color="textSecondary">
+                Yaoundé - Cameroun - 2019
+              </Typography> */}
+            </CardContent>
+          </Card>
+        </Grid2>
+        {/* Formation 1 */}
+        <Grid2 item size={{ xs: 12, sm: 6, lg: 6 }} md={6}>
+          <Card>
+            <CardContent style={{}}>
+              <p gutterBottom>
+                <Typography variant="h6" gutterBottom>
                   Attestation de Spécialisation professionnelle
                 </Typography>
                 (Lancement d&apos;une Entreprise)
@@ -72,7 +91,7 @@ const Formation = () => {
             <CardContent>
               <p gutterBottom>
                 <Typography variant="h6" gutterBottom>
-                  Diplôme d&apos;Etude Collégiale
+                  Diplôme d&apos;Etude Secondaire
                 </Typography>
                 (Sciences informatiques et mathématiques)
               </p>
@@ -96,7 +115,7 @@ const Formation = () => {
                 </Typography>
                 ICT4D (Information And Communication Technology For Development)
               </p>
-              <Typography variant="body2" color="#61798a" sx={{mt:-2, fontStyle:"italic"}} >
+              <Typography variant="body2" color="#61798a" sx={{mt:-2,fontWeight:'bold', fontStyle:"italic"}} >
                 Equivalence du MIFI Québec | 2024
               </Typography>
               <Typography variant="body2" color="textSecondary">

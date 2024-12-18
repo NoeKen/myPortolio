@@ -10,7 +10,7 @@ import './globals.css';
 
 export const metadata = {
   title: 'Noe Kenfack',
-  description: 'Portfolio de Aurel Noe KENFACK, Développeur Power Apps Junior || Développeur Mobile et Web JS',
+  description: 'Portfolio de Aurel Noe KENFACK, Développeur Power Apps Junior || Développeur Mobile et Web JS, Analyste programmeur',
 };
 
 export default function RootLayout({ children }) {

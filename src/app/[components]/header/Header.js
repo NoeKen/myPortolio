@@ -46,7 +46,7 @@ export default function Header() {
               >
                 Aurel Noe Kenfack
               </h1>
-              <Typography
+              {/* <Typography
                 style={{
                   fontSize: "1rem",
                   color: theme.colors.primary,
@@ -54,7 +54,7 @@ export default function Header() {
                 }}
               >
                 Développeur Power Apps Junior || Développeur Mobile et Web JS
-              </Typography>
+              </Typography> */}
               {/* <p style={{ fontSize: "1.2rem", marginTop: "2rem" }}>
                 <a
                   href="/about"
@@ -109,7 +109,8 @@ export default function Header() {
                   bgcolor: theme.colors.primary,
                 }}
               >
-                Mon CV
+              <a href="/assets/files/monCV.pdf" download>Mon CV</a>
+                
               </Button>
             </Box>
           </Grid2>
