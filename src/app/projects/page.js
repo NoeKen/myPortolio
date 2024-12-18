@@ -13,6 +13,7 @@ export default function Projects() {
       // title: 'EchoArt',
       // description: 'Plateforme de partage d\'images captivantes d\'animaux, permettant aux utilisateurs de télécharger et de partager leurs œuvres.',
       technologies: ["Power Apps", "Power Automate", "SharePoint", "Power FX"],
+      link:""
     },
     {
       image: "./assets/conges.png", // Remplace par le chemin de l'image de ton projet ShareSpace
@@ -20,13 +21,15 @@ export default function Projects() {
       description:
         "Une plateforme de petites annonces locales pour la consultation d'événements et la location d'espaces.",
       technologies: ["Next.js", "Firebase", "Tailwind CSS"],
+      link:""
     },
     {
-      image: "./assets/conges.png", // Remplace par le chemin de l'image de ton application d'alimentation bio
+      image: "./assets/beAware.png", // Remplace par le chemin de l'image de ton application d'alimentation bio
       title: "BeAware",
       description:
         "Application mobile Android d'aide a la gestion financière, suivi des dépenses quotidiennes, génération et exportation de rapports.",
       technologies: ["React Native", "Redux", "SQLite"],
+      link: "https://play.google.com/store/apps/details?id=com.beaware&pcampaignid=web_share"
     },
     // {
     //   image: "./assets/conges.png", // Remplace par le chemin de l'image de ton application d'alimentation bio

@@ -22,17 +22,18 @@ const Navbar = () => {
       {/* Logo */}
       <div className="navbar-logo">
         <Link href="/">
-          <div>
+          <img src="/assets/NKLogo_L.png" alt="logo" width={150}/>
+          {/* <div>
             <Typography
               sx={{
                 color: "white",
                 fontWeight: "bold",
-                fontSize: theme.fontSize.title,
+                fontSize: theme?.fontSize?.title
               }}
             >
               NK
             </Typography>
-          </div>
+          </div> */}
         </Link>
       </div>
 
@@ -80,7 +81,7 @@ const Navbar = () => {
           <Link href="#contact">
             <Typography
               className="nav-link"
-              sx={{ color: isCurrentPage("/contact") ? "green" : "white" }} // Couleur verte pour la page active
+              // sx={{ color: isCurrentPage("/contact") ? "green" : "white" }} // Couleur verte pour la page active
             >
               <span>Contact</span>
             </Typography>

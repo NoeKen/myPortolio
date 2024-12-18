@@ -53,7 +53,7 @@ export default function Header() {
                   marginBottom: "2rem",
                 }}
               >
-                Développeur Power Apps Junior || Développeur Mobile React Native
+                Développeur Power Apps Junior || Développeur Mobile et Web JS
               </Typography>
               {/* <p style={{ fontSize: "1.2rem", marginTop: "2rem" }}>
                 <a
