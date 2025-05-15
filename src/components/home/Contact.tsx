@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -25,13 +24,13 @@ export function Contact() {
     resolver: zodResolver(contactFormSchema),
   });
 
-  const onSubmit = async ( ContactFormValues) => {
+  const onSubmit = async (formData: ContactFormValues) => {
     setIsLoading(true);
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify(formData),
       });
 
       if (!response.ok) {

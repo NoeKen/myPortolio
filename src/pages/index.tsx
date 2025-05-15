@@ -6,14 +6,13 @@ import { About } from "@/components/home/About";
 import { Skills } from "@/components/home/Skills";
 import { Projects } from "@/components/home/Projects";
 import { Contact } from "@/components/home/Contact";
-import { profileService, ProfileData } from "@/services/profileService";
-import { GetServerSideProps } from "next";
 
-interface HomePageProps {
-  profile: ProfileData | null;
-}
+// CV URL can be hardcoded here if needed, e.g.
+// const staticCvUrl = "/path/to/your/cv.pdf"; 
+// or leave it undefined if you don't want the download button for now.
+const staticCvUrl = undefined; 
 
-export default function Home({ profile }: HomePageProps) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -22,8 +21,8 @@ export default function Home({ profile }: HomePageProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <Layout cvUrl={profile?.cv_url || undefined}>
-        <Hero cvUrl={profile?.cv_url || undefined} />
+      <Layout cvUrl={staticCvUrl}>
+        <Hero cvUrl={staticCvUrl} />
         <About />
         <Skills />
         <Projects />
@@ -32,12 +31,3 @@ export default function Home({ profile }: HomePageProps) {
     </>
   );
 }
-
-export const getServerSideProps: GetServerSideProps = async () => {
-  const profile = await profileService.getProfile();
-  return {
-    props: {
-      profile,
-    },
-  };
-};
