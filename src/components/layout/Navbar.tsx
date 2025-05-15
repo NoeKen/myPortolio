@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, Download } from "lucide-react";
@@ -41,14 +40,17 @@ export function Navbar({ cvUrl }: NavbarProps) {
           <Link href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
             Contact
           </Link>
-          {cvUrl && (
-            <Button variant="default" size="sm" asChild>
-              <a href={cvUrl} target="_blank" rel="noopener noreferrer" download>
-                <Download className="mr-2 h-4 w-4" />
-                Télécharger CV
-              </a>
-            </Button>
-          )}
+          <Button variant="default" size="sm" asChild disabled={!cvUrl}>
+            <a 
+              href={cvUrl || "#"} 
+              target={cvUrl ? "_blank" : undefined} 
+              rel={cvUrl ? "noopener noreferrer" : undefined} 
+              download={cvUrl ? "cv.pdf" : undefined}
+            >
+              <Download className="mr-2 h-4 w-4" />
+              Télécharger CV
+            </a>
+          </Button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -100,14 +102,17 @@ export function Navbar({ cvUrl }: NavbarProps) {
             >
               Contact
             </Link>
-            {cvUrl && (
-              <Button variant="default" size="sm" className="w-full" asChild>
-                <a href={cvUrl} target="_blank" rel="noopener noreferrer" download>
-                  <Download className="mr-2 h-4 w-4" />
-                  Télécharger CV
-                </a>
-              </Button>
-            )}
+            <Button variant="default" size="sm" className="w-full" asChild disabled={!cvUrl}>
+              <a 
+                href={cvUrl || "#"} 
+                target={cvUrl ? "_blank" : undefined} 
+                rel={cvUrl ? "noopener noreferrer" : undefined} 
+                download={cvUrl ? "cv.pdf" : undefined}
+              >
+                <Download className="mr-2 h-4 w-4" />
+                Télécharger CV
+              </a>
+            </Button>
           </nav>
         </div>
       )}

@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight, Download } from "lucide-react";
@@ -50,15 +49,18 @@ export function Hero({ cvUrl }: HeroProps) {
                 </Link>
               </Button>
             </motion.div>
-            {cvUrl && (
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button variant="outline" size="lg" asChild>
-                  <a href={cvUrl} target="_blank" rel="noopener noreferrer" download>
-                    <Download className="mr-2 h-4 w-4" /> Télécharger mon CV
-                  </a>
-                </Button>
-              </motion.div>
-            )}
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Button variant="outline" size="lg" asChild disabled={!cvUrl}>
+                <a 
+                  href={cvUrl || "#"} 
+                  target={cvUrl ? "_blank" : undefined} 
+                  rel={cvUrl ? "noopener noreferrer" : undefined} 
+                  download={cvUrl ? "cv.pdf" : undefined}
+                >
+                  <Download className="mr-2 h-4 w-4" /> Télécharger mon CV
+                </a>
+              </Button>
+            </motion.div>
           </motion.div>
         </div>
       </div>
