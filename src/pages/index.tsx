@@ -1,21 +1,28 @@
-import React from 'react'
-import Head from 'next/head'
+
+import Head from "next/head";
+import { Layout } from "@/components/layout/Layout";
+import { Hero } from "@/components/home/Hero";
+import { About } from "@/components/home/About";
+import { Skills } from "@/components/home/Skills";
+import { Projects } from "@/components/home/Projects";
+import { Contact } from "@/components/home/Contact";
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Hello World</title>
-        <meta name="description" content="Welcome to my app" />
+        <title>Portfolio | Développeur Analyste & Designer UI/UX</title>
+        <meta name="description" content="Portfolio professionnel d'un développeur analyste avec 3 ans d'expérience, compétences en design UI/UX et administration système." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <main className="min-h-screen bg-gray-100 flex items-center justify-center">
-        <div className="text-center space-y-4">
-          <h1 className="text-4xl font-bold text-gray-900">Hello World</h1>
-          <p className="text-lg text-gray-600">This is going to be your softgen app, start by describing your project.</p>
-        </div>
-      </main>
+      <Layout>
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </Layout>
     </>
-  )
+  );
 }

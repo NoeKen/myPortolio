@@ -1,0 +1,83 @@
+
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, MapPin, Phone } from "lucide-react";
+
+export function Contact() {
+  return (
+    <section id="contact" className="py-16 md:py-24">
+      <div className="container px-4 md:px-6">
+        <div className="flex flex-col items-center text-center mb-12">
+          <h2 className="text-3xl font-bold tracking-tighter mb-4">Contact</h2>
+          <p className="text-muted-foreground max-w-[700px]">
+            Vous avez un projet en tête ou souhaitez discuter d'une opportunité ? N'hésitez pas à me contacter.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <Card>
+            <CardHeader>
+              <CardTitle>Envoyez-moi un message</CardTitle>
+              <CardDescription>
+                Remplissez le formulaire ci-dessous et je vous répondrai dans les plus brefs délais.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <form className="space-y-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="space-y-2">
+                    <Input placeholder="Nom" />
+                  </div>
+                  <div className="space-y-2">
+                    <Input placeholder="Email" type="email" />
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <Input placeholder="Sujet" />
+                </div>
+                <div className="space-y-2">
+                  <Textarea placeholder="Message" className="min-h-[120px]" />
+                </div>
+                <Button type="submit" className="w-full">
+                  Envoyer le message
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+
+          <div className="flex flex-col justify-center space-y-6">
+            <Card>
+              <CardContent className="flex items-start space-x-4 pt-6">
+                <Mail className="h-6 w-6 text-primary" />
+                <div>
+                  <h3 className="font-semibold">Email</h3>
+                  <p className="text-sm text-muted-foreground">contact@example.com</p>
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="flex items-start space-x-4 pt-6">
+                <Phone className="h-6 w-6 text-primary" />
+                <div>
+                  <h3 className="font-semibold">Téléphone</h3>
+                  <p className="text-sm text-muted-foreground">+33 6 XX XX XX XX</p>
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="flex items-start space-x-4 pt-6">
+                <MapPin className="h-6 w-6 text-primary" />
+                <div>
+                  <h3 className="font-semibold">Localisation</h3>
+                  <p className="text-sm text-muted-foreground">Paris, France</p>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
