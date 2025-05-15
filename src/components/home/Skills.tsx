@@ -33,7 +33,7 @@ export function Skills() {
     { name: "Sécurité informatique", level: 75, category: "system" },
   ];
 
-  const SkillItem = ({ skill, index }: { skill: Skill; index: number }) => {
+  const SkillItem = ({ skill, index, isHovered }: { skill: Skill; index: number; isHovered: boolean }) => {
     const [progress, setProgress] = useState(0);
     
     useEffect(() => {
@@ -46,7 +46,7 @@ export function Skills() {
 
     return (
       <motion.div 
-        className="mb-4"
+        className="mb-4 relative"
         initial={{ opacity: 0, x: -20 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -63,13 +63,35 @@ export function Skills() {
             {progress}%
           </motion.span>
         </div>
-        <Progress 
-          value={progress} 
-          className="h-2"
-          style={{
-            transition: "all 1s cubic-bezier(0.65, 0, 0.35, 1)"
-          }}
-        />
+        <div className="relative">
+          <Progress 
+            value={progress} 
+            className="h-2"
+            style={{
+              transition: "all 1s cubic-bezier(0.65, 0, 0.35, 1)"
+            }}
+          />
+          {isHovered && (
+            <motion.div 
+              className="absolute left-0 top-0 h-2 bg-primary/30"
+              initial={{ width: 0 }}
+              animate={{ width: `${progress}%` }}
+              transition={{ duration: 0.3 }}
+              style={{ width: `${progress}%` }}
+            />
+          )}
+          {isHovered && (
+            <motion.div 
+              className="absolute -top-8 px-2 py-1 bg-primary text-primary-foreground rounded text-xs font-medium"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.2 }}
+              style={{ left: `calc(${progress}% - 20px)` }}
+            >
+              {progress}%
+            </motion.div>
+          )}
+        </div>
       </motion.div>
     );
   };
@@ -85,6 +107,8 @@ export function Skills() {
       }
     })
   };
+
+  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
   return (
     <section id="skills" className="py-16 md:py-24">
@@ -106,12 +130,19 @@ export function Skills() {
               whileInView="visible"
               viewport={{ once: true }}
               whileHover={{ y: -10, transition: { duration: 0.3 } }}
+              onHoverStart={() => setHoveredCard("development")}
+              onHoverEnd={() => setHoveredCard(null)}
             >
               <Card className="h-full">
                 <CardContent className="pt-6">
                   <h3 className="text-xl font-semibold mb-4 text-center">Développement</h3>
                   {developmentSkills.map((skill, index) => (
-                    <SkillItem key={skill.name} skill={skill} index={index} />
+                    <SkillItem 
+                      key={skill.name} 
+                      skill={skill} 
+                      index={index} 
+                      isHovered={hoveredCard === "development"} 
+                    />
                   ))}
                 </CardContent>
               </Card>
@@ -124,12 +155,19 @@ export function Skills() {
               whileInView="visible"
               viewport={{ once: true }}
               whileHover={{ y: -10, transition: { duration: 0.3 } }}
+              onHoverStart={() => setHoveredCard("design")}
+              onHoverEnd={() => setHoveredCard(null)}
             >
               <Card className="h-full">
                 <CardContent className="pt-6">
                   <h3 className="text-xl font-semibold mb-4 text-center">Design</h3>
                   {designSkills.map((skill, index) => (
-                    <SkillItem key={skill.name} skill={skill} index={index} />
+                    <SkillItem 
+                      key={skill.name} 
+                      skill={skill} 
+                      index={index} 
+                      isHovered={hoveredCard === "design"} 
+                    />
                   ))}
                 </CardContent>
               </Card>
@@ -142,12 +180,19 @@ export function Skills() {
               whileInView="visible"
               viewport={{ once: true }}
               whileHover={{ y: -10, transition: { duration: 0.3 } }}
+              onHoverStart={() => setHoveredCard("system")}
+              onHoverEnd={() => setHoveredCard(null)}
             >
               <Card className="h-full">
                 <CardContent className="pt-6">
                   <h3 className="text-xl font-semibold mb-4 text-center">Administration Système</h3>
                   {systemSkills.map((skill, index) => (
-                    <SkillItem key={skill.name} skill={skill} index={index} />
+                    <SkillItem 
+                      key={skill.name} 
+                      skill={skill} 
+                      index={index} 
+                      isHovered={hoveredCard === "system"} 
+                    />
                   ))}
                 </CardContent>
               </Card>
