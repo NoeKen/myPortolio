@@ -5,12 +5,13 @@ import { Footer } from "@/components/layout/Footer";
 
 interface LayoutProps {
   children: ReactNode;
+  cvUrl?: string;
 }
 
-export function Layout({ children }: LayoutProps) {
+export function Layout({ children, cvUrl }: LayoutProps) {
   return (
     <div className="flex min-h-screen flex-col">
-      <Navbar />
+      <Navbar cvUrl={cvUrl} />
       <main className="flex-1">{children}</main>
       <Footer />
     </div>

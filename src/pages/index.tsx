@@ -6,8 +6,14 @@ import { About } from "@/components/home/About";
 import { Skills } from "@/components/home/Skills";
 import { Projects } from "@/components/home/Projects";
 import { Contact } from "@/components/home/Contact";
+import { profileService, ProfileData } from "@/services/profileService";
+import { GetServerSideProps } from "next";
 
-export default function Home() {
+interface HomePageProps {
+  profile: ProfileData | null;
+}
+
+export default function Home({ profile }: HomePageProps) {
   return (
     <>
       <Head>
@@ -16,8 +22,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <Layout>
-        <Hero />
+      <Layout cvUrl={profile?.cv_url || undefined}>
+        <Hero cvUrl={profile?.cv_url || undefined} />
         <About />
         <Skills />
         <Projects />
@@ -26,3 +32,12 @@ export default function Home() {
     </>
   );
 }
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  const profile = await profileService.getProfile();
+  return {
+    props: {
+      profile,
+    },
+  };
+};

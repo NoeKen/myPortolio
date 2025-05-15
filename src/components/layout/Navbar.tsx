@@ -1,10 +1,14 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
-export function Navbar() {
+interface NavbarProps {
+  cvUrl?: string;
+}
+
+export function Navbar({ cvUrl }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -37,9 +41,14 @@ export function Navbar() {
           <Link href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
             Contact
           </Link>
-          <Button variant="default" size="sm">
-            Télécharger CV
-          </Button>
+          {cvUrl && (
+            <Button variant="default" size="sm" asChild>
+              <a href={cvUrl} target="_blank" rel="noopener noreferrer" download>
+                <Download className="mr-2 h-4 w-4" />
+                Télécharger CV
+              </a>
+            </Button>
+          )}
         </nav>
 
         {/* Mobile Menu Button */}
@@ -91,9 +100,14 @@ export function Navbar() {
             >
               Contact
             </Link>
-            <Button variant="default" size="sm" className="w-full">
-              Télécharger CV
-            </Button>
+            {cvUrl && (
+              <Button variant="default" size="sm" className="w-full" asChild>
+                <a href={cvUrl} target="_blank" rel="noopener noreferrer" download>
+                  <Download className="mr-2 h-4 w-4" />
+                  Télécharger CV
+                </a>
+              </Button>
+            )}
           </nav>
         </div>
       )}

@@ -4,7 +4,11 @@ import Link from "next/link";
 import { ArrowRight, Download } from "lucide-react";
 import { motion } from "framer-motion";
 
-export function Hero() {
+interface HeroProps {
+  cvUrl?: string;
+}
+
+export function Hero({ cvUrl }: HeroProps) {
   return (
     <section className="py-20 md:py-28 relative overflow-hidden">
       <div className="container px-4 md:px-6">
@@ -46,16 +50,19 @@ export function Hero() {
                 </Link>
               </Button>
             </motion.div>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <Button variant="outline" size="lg">
-                <Download className="mr-2 h-4 w-4" /> Télécharger mon CV
-              </Button>
-            </motion.div>
+            {cvUrl && (
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                <Button variant="outline" size="lg" asChild>
+                  <a href={cvUrl} target="_blank" rel="noopener noreferrer" download>
+                    <Download className="mr-2 h-4 w-4" /> Télécharger mon CV
+                  </a>
+                </Button>
+              </motion.div>
+            )}
           </motion.div>
         </div>
       </div>
       
-      {/* Animated background element */}
       <motion.div 
         className="absolute -bottom-16 left-1/2 transform -translate-x-1/2 w-[800px] h-[800px] rounded-full bg-primary/5 z-[-1]"
         animate={{ 
