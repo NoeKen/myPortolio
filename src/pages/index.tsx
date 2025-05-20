@@ -10,19 +10,19 @@ import { Contact } from "@/components/home/Contact";
 // CV URL can be hardcoded here if needed, e.g.
 // const staticCvUrl = "/path/to/your/cv.pdf"; 
 // or leave it undefined if you don't want the download button for now.
-const staticCvUrl = undefined; 
+const staticCvUrl = "/docs/CV_Noe-Kenfack.pdf"; 
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Portfolio | Noé Kenfack, Développeur Analyste & Designer UI/UX</title>
+        <title>Noé Kenfack</title>
         <meta name="description" content="Portfolio professionnel d'un développeur analyste (Noé Kenfack) avec 3 ans d'expérience, compétences en design UI/UX et administration système." />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
       <Layout cvUrl={staticCvUrl}>
-        <Hero cvUrl={staticCvUrl} />
+        <Hero />
         <About />
         <Skills />
         <Projects />

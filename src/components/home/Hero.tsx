@@ -3,11 +3,9 @@ import Link from "next/link";
 import { ArrowRight, Contact, Download } from "lucide-react";
 import { motion } from "framer-motion";
 
-interface HeroProps {
-  cvUrl?: string;
-}
 
-export function Hero({ cvUrl }: HeroProps) {
+
+export function Hero() {
   return (
     <>
       <section className="py-20 md:py-28 relative overflow-hidden">
@@ -78,13 +76,8 @@ export function Hero({ cvUrl }: HeroProps) {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <Button variant="outline" size="lg" asChild disabled={!cvUrl}>
-                  <a
-                    href={cvUrl || "#"}
-                    target={cvUrl ? "_blank" : undefined}
-                    rel={cvUrl ? "noopener noreferrer" : undefined}
-                    download={cvUrl ? "cv.pdf" : undefined}
-                  >
+                <Button variant="outline" size="lg" asChild>
+                  <a>
                     <Contact className="mr-2 h-4 w-4" /> Me contacter
                   </a>
                 </Button>

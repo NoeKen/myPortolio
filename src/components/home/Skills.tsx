@@ -2,6 +2,7 @@ import { SectionAnimation } from "@/components/animations/SectionAnimation";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import {
+  ClipboardList,
   Cloud,
   Code,
   Code2,
@@ -13,6 +14,7 @@ import {
   Palette,
   Server,
   TerminalSquare,
+  Wrench,
 } from "lucide-react";
 import { useState } from "react";
 
@@ -44,6 +46,61 @@ export function Skills() {
       },
     },
   };
+
+  const skillsData = [
+  {
+    title: "Développement Web & Mobile",
+    icon: Code2,
+    items: [
+      "HTML, CSS, JavaScript, TypeScript, ",
+      "React, Next.js, Tailwind CSS, Bootstrap, ",
+      "React Native",
+      "Node.js, Express.js, Sequelize,",
+      "API REST, Firebase"
+    ]
+  },
+  {
+    title: "Design UX/UI & Graphisme",
+    icon: Paintbrush2,
+    items: [
+      "Figma, Adobe XD, Photoshop",
+      "Illustrator, Canva",
+      "Design UI/UX, Branding"
+    ]
+  },
+  {
+    title: "Base de données",
+    icon: Database,
+    items: [
+      "MongoDB, PostgreSQL, MySQL, SQLite, Oracle",
+    ]
+  },
+  {
+    title: "Déploiement & Maintenance",
+    icon: Cloud,
+    items: [
+      "Firebase, Vercel, Netlify",
+      "Git, GitHub",
+      "Windows Server"
+    ]
+  },
+  {
+    title: "Gestion de projet",
+    icon: ClipboardList,
+    items: [
+      "Trello, Jira, Notion, Slack"
+    ]
+  },
+  {
+    title: "NoCode / LowCode",
+    icon: Wrench,
+    items: [
+      "Webflow, Framer",
+      "Airtable, Notion",
+      "Zapier, Make (Integromat)"
+    ]
+  }
+];
 
   const developmentSkills: Skill[] = [
     { name: "JavaScript / TypeScript", icon: Code2, category: "development" },
@@ -139,8 +196,6 @@ export function Skills() {
     }),
   };
 
-  const [hoveredCard, setHoveredCard] = useState<string | null>(null);
-
   return (
     <section id="skills" className="py-16 md:py-24">
       <SectionAnimation>
@@ -157,7 +212,47 @@ export function Skills() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1  text-center md:grid-cols-3 xl:grid-cols-3 gap-6">
+            {skillsData.map((section, index) => {
+              const Icon = section.icon;
+              return (
+                <motion.div
+                  key={section.title}
+                  custom={index}
+                  variants={cardVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  whileHover={{ y: -8 }}
+                >
+                  <Card className="h-full bg-background/60 backdrop-blur-sm">
+                    <CardContent className="pt-6 px-6 pb-4 flex flex-col">
+                      <motion.div
+                        className="p-3 rounded-full bg-primary/10 mb-4 self-center"
+                        variants={iconVariants}
+                        initial="hidden"
+                        whileInView="visible"
+                        whileHover="hover"
+                        viewport={{ once: true }}
+                      >
+                        <Icon className="h-6 w-6 text-primary" />
+                      </motion.div>
+                      <h3 className="text-lg font-semibold text-center mb-2">
+                        {section.title}
+                      </h3>
+                      <ul className="list-disc list-inside text-sm text-muted-foreground space-y-1">
+                        {section.items.map((item, i) => (
+                          <>{item}</>
+                        ))}
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              );
+            })}
+          </div>
+
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
               custom={0}
               variants={cardVariants}
@@ -253,7 +348,7 @@ export function Skills() {
                 </CardContent>
               </Card>
             </motion.div>
-          </div>
+          </div> */}
         </div>
       </SectionAnimation>
     </section>

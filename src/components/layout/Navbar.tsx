@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 interface NavbarProps {
   cvUrl?: string;
@@ -19,33 +20,49 @@ export function Navbar({ cvUrl }: NavbarProps) {
       <div className="container flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
           <Link href="/" className="text-xl font-bold">
-            Portfolio
+            <Image src="/images/logo.png" width={50} height={50} alt="Logo KLAN" className="h-8 w-auto rounded-md shadow-sm" />
+            <span className="sr-only">Accueil</span> {/* Accessibilité */}
           </Link>
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-6">
-          <Link href="/" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link
+            href="/"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
             Accueil
           </Link>
-          <Link href="#about" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link
+            href="#about"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
             À propos
           </Link>
-          <Link href="#skills" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link
+            href="#skills"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
             Compétences
           </Link>
-          <Link href="#projects" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link
+            href="#projects"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
             Projets
           </Link>
-          <Link href="#contact" className="text-sm font-medium hover:text-primary transition-colors">
+          <Link
+            href="#contact"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
             Contact
           </Link>
           <Button variant="default" size="sm" asChild disabled={!cvUrl}>
-            <a 
-              href={cvUrl || "#"} 
-              target={cvUrl ? "_blank" : undefined} 
-              rel={cvUrl ? "noopener noreferrer" : undefined} 
-              download={cvUrl ? "cv.pdf" : undefined}
+            <a
+              href={cvUrl || "#"}
+              target={cvUrl ? "_blank" : undefined}
+              rel={cvUrl ? "noopener noreferrer" : undefined}
+              download={cvUrl ? "CV_Noe Kenfack.pdf" : undefined}
             >
               <Download className="mr-2 h-4 w-4" />
               Télécharger CV
@@ -102,12 +119,18 @@ export function Navbar({ cvUrl }: NavbarProps) {
             >
               Contact
             </Link>
-            <Button variant="default" size="sm" className="w-full" asChild disabled={!cvUrl}>
-              <a 
-                href={cvUrl || "#"} 
-                target={cvUrl ? "_blank" : undefined} 
-                rel={cvUrl ? "noopener noreferrer" : undefined} 
-                download={cvUrl ? "cv.pdf" : undefined}
+            <Button
+              variant="default"
+              size="sm"
+              className="w-full"
+              asChild
+              disabled={!cvUrl}
+            >
+              <a
+                href={cvUrl || "#"}
+                target={cvUrl ? "_blank" : undefined}
+                rel={cvUrl ? "noopener noreferrer" : undefined}
+                download={cvUrl ? "CV_Noe Kenfack.pdf" : undefined}
               >
                 <Download className="mr-2 h-4 w-4" />
                 Télécharger CV

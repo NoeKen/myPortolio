@@ -8,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { toast } from "sonner";
 import { useState } from "react";
+import ContactForm from "./ContactForm";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Le nom doit contenir au moins 2 caractères." }),
@@ -66,7 +67,8 @@ export function Contact() {
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+              <ContactForm />
+              {/* <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-2">
                     <Input placeholder="Nom" {...register("name")} />
@@ -88,7 +90,7 @@ export function Contact() {
                 <Button type="submit" className="w-full" disabled={isLoading}>
                   {isLoading ? "Envoi en cours..." : "Envoyer le message"}
                 </Button>
-              </form>
+              </form> */}
             </CardContent>
           </Card>
 
@@ -99,7 +101,7 @@ export function Contact() {
                 <Mail className="h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Email</h3>
-                  <p className="text-sm text-muted-foreground">contact@example.com</p>
+                  <p className="text-sm text-muted-foreground">kenfackaurel1@gmail.com</p>
                 </div>
               </CardContent>
             </Card>
@@ -108,7 +110,7 @@ export function Contact() {
                 <Phone className="h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Téléphone</h3>
-                  <p className="text-sm text-muted-foreground">+33 6 XX XX XX XX</p>
+                  <p className="text-sm text-muted-foreground">+1 263 880 7882</p>
                 </div>
               </CardContent>
             </Card>
@@ -117,7 +119,7 @@ export function Contact() {
                 <MapPin className="h-6 w-6 text-primary" />
                 <div>
                   <h3 className="font-semibold">Localisation</h3>
-                  <p className="text-sm text-muted-foreground">Paris, France</p>
+                  <p className="text-sm text-muted-foreground">Montréal (QC), Canada</p>
                 </div>
               </CardContent>
             </Card>

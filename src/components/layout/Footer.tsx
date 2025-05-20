@@ -1,6 +1,7 @@
 
 import Link from "next/link";
 import { Github, Linkedin, Mail } from "lucide-react";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -8,7 +9,7 @@ export function Footer() {
       <div className="container py-8 md:py-12">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col items-center md:items-start">
-            <h3 className="text-lg font-semibold">Portfolio</h3>
+            <Image src="/images/logo-t.png" width={80} height={70} alt="Logo KLAN"></Image>
             <p className="text-sm text-muted-foreground mt-1">
               © {new Date().getFullYear()} Tous droits réservés
             </p>
