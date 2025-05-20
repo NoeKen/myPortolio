@@ -77,7 +77,7 @@ export function Hero() {
                 whileTap={{ scale: 0.95 }}
               >
                 <Button variant="outline" size="lg" asChild>
-                  <a>
+                  <a href="#contact">
                     <Contact className="mr-2 h-4 w-4" /> Me contacter
                   </a>
                 </Button>

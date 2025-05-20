@@ -1,14 +1,13 @@
-import { Button } from "@/components/ui/button";
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone } from "lucide-react";
-import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import * as z from "zod";
-import { toast } from "sonner";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { toast } from "sonner";
+import * as z from "zod";
 import ContactForm from "./ContactForm";
+import { motion } from "framer-motion";
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: "Le nom doit contenir au moins 2 caractères." }),
@@ -50,15 +49,33 @@ export function Contact() {
 
   return (
     <section id="contact" className="py-16 md:py-24">
-      <div className="container px-4 md:px-6">
-        <div className="flex flex-col items-center text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter mb-4">Contact</h2>
-          <p className="text-muted-foreground max-w-[700px]">
-            Vous avez un projet en tête ou souhaitez discuter d'une opportunité ? N'hésitez pas à me contacter.
-          </p>
-        </div>
+    <motion.div
+      className="container px-4 md:px-6"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
+      <motion.div
+        className="flex flex-col items-center text-center mb-12"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+      >
+        <h2 className="text-3xl font-bold tracking-tighter mb-4">Contact</h2>
+        <p className="text-muted-foreground max-w-[700px]">
+          Vous avez un projet en tête ou souhaitez discuter d'une opportunité ? N'hésitez pas à me contacter.
+        </p>
+      </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           <Card>
             <CardHeader>
               <CardTitle>Envoyez-moi un message</CardTitle>
@@ -68,64 +85,57 @@ export function Contact() {
             </CardHeader>
             <CardContent>
               <ContactForm />
-              {/* <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Input placeholder="Nom" {...register("name")} />
-                    {errors.name && <p className="text-sm text-destructive">{errors.name.message}</p>}
-                  </div>
-                  <div className="space-y-2">
-                    <Input placeholder="Email" type="email" {...register("email")} />
-                    {errors.email && <p className="text-sm text-destructive">{errors.email.message}</p>}
-                  </div>
-                </div>
-                <div className="space-y-2">
-                  <Input placeholder="Sujet" {...register("subject")} />
-                  {errors.subject && <p className="text-sm text-destructive">{errors.subject.message}</p>}
-                </div>
-                <div className="space-y-2">
-                  <Textarea placeholder="Message" className="min-h-[120px]" {...register("message")} />
-                  {errors.message && <p className="text-sm text-destructive">{errors.message.message}</p>}
-                </div>
-                <Button type="submit" className="w-full" disabled={isLoading}>
-                  {isLoading ? "Envoi en cours..." : "Envoyer le message"}
-                </Button>
-              </form> */}
             </CardContent>
           </Card>
+        </motion.div>
 
-          <div className="flex flex-col justify-center space-y-6">
-            {/* These could be dynamic from profile data later */}
-            <Card>
-              <CardContent className="flex items-start space-x-4 pt-6">
-                <Mail className="h-6 w-6 text-primary" />
-                <div>
-                  <h3 className="font-semibold">Email</h3>
-                  <p className="text-sm text-muted-foreground">kenfackaurel1@gmail.com</p>
-                </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="flex items-start space-x-4 pt-6">
-                <Phone className="h-6 w-6 text-primary" />
-                <div>
-                  <h3 className="font-semibold">Téléphone</h3>
-                  <p className="text-sm text-muted-foreground">+1 263 880 7882</p>
-                </div>
-              </CardContent>
-            </Card>
-            <Card>
-              <CardContent className="flex items-start space-x-4 pt-6">
-                <MapPin className="h-6 w-6 text-primary" />
-                <div>
-                  <h3 className="font-semibold">Localisation</h3>
-                  <p className="text-sm text-muted-foreground">Montréal (QC), Canada</p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+        <motion.div
+          className="flex flex-col justify-center space-y-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {[ // Cartes dynamiques animées
+            {
+              icon: <Mail className="h-6 w-6 text-primary" />,
+              title: "Email",
+              text: "kenfackaurel1@gmail.com",
+              delay: 0.3,
+            },
+            {
+              icon: <Phone className="h-6 w-6 text-primary" />,
+              title: "Téléphone",
+              text: "+1 263 880 7882",
+              delay: 0.4,
+            },
+            {
+              icon: <MapPin className="h-6 w-6 text-primary" />,
+              title: "Localisation",
+              text: "Montréal (QC), Canada",
+              delay: 0.5,
+            },
+          ].map((item, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: item.delay, duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <Card>
+                <CardContent className="flex items-start space-x-4 pt-6">
+                  {item.icon}
+                  <div>
+                    <h3 className="font-semibold">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground">{item.text}</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
-    </section>
+    </motion.div>
+  </section>
   );
 }

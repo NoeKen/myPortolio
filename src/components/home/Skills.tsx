@@ -95,9 +95,8 @@ export function Skills() {
     title: "NoCode / LowCode",
     icon: Wrench,
     items: [
-      "Webflow, Framer",
-      "Airtable, Notion",
-      "Zapier, Make (Integromat)"
+      "Power apps, Power Automate, ",
+      "Airtable, Notion, Make (Integromat)"
     ]
   }
 ];

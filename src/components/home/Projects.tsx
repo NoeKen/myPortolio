@@ -22,41 +22,41 @@ export function Projects() {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Application de Gestion de Projet",
-      description: "Une application web permettant aux équipes de gérer leurs projets, tâches et échéances.",
+      title: "Application de Gestion de Congés",
+      description: "Une application mobile permettant aux équipes de gérer le suivi des demandes de congés au sein de l'entreprise.",
       image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-      tags: ["React", "Node.js", "MongoDB", "Express"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      tags: ["Power Apps", "Power Automate", "Sharepoint", "Power FX"],
+      // liveUrl: "https://example.com",
+      // githubUrl: "https://github.com",
       category: "development"
     },
     {
       id: 2,
-      title: "Refonte UI/UX Site E-commerce",
-      description: "Refonte complète de l'interface utilisateur d'un site e-commerce pour améliorer l'expérience d'achat.",
+      title: "Application de Gestion des dépences financières",
+      description: "Application de gestion des dépenses financières pour une meilleure visibilité sur les finances personnelles.",
       image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-      tags: ["UI/UX", "Figma", "Adobe XD", "Responsive"],
-      liveUrl: "https://example.com",
-      category: "design"
-    },
-    {
-      id: 3,
-      title: "Système de Gestion des Utilisateurs",
-      description: "Mise en place d'un système de gestion des utilisateurs avec Active Directory pour une entreprise de 200 employés.",
-      image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-      tags: ["Active Directory", "Windows Server", "PowerShell", "Sécurité"],
-      category: "system"
-    },
-    {
-      id: 4,
-      title: "Application Mobile de Fitness",
-      description: "Application mobile permettant aux utilisateurs de suivre leurs activités sportives et leur alimentation.",
-      image: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
-      tags: ["React Native", "Firebase", "API REST", "UI/UX"],
-      liveUrl: "https://example.com",
-      githubUrl: "https://github.com",
+      tags: ["React-Native", "Sqlite", "Redux", "Playstore"],
+      liveUrl: "https://play.google.com/store/apps/details?id=com.beaware&pcampaignid=web_share",
       category: "development"
     },
+    // {
+    //   id: 3,
+    //   title: "Système de Gestion des Utilisateurs",
+    //   description: "Mise en place d'un système de gestion des utilisateurs avec Active Directory pour une entreprise de 200 employés.",
+    //   image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    //   tags: ["Active Directory", "Windows Server", "PowerShell", "Sécurité"],
+    //   category: "system"
+    // },
+    // {
+    //   id: 4,
+    //   title: "Application Mobile de Fitness",
+    //   description: "Application mobile permettant aux utilisateurs de suivre leurs activités sportives et leur alimentation.",
+    //   image: "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+    //   tags: ["React Native", "Firebase", "API REST", "UI/UX"],
+    //   liveUrl: "https://example.com",
+    //   githubUrl: "https://github.com",
+    //   category: "development"
+    // },
   ];
 
   const cardVariants = {
