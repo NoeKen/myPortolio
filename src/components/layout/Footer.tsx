@@ -26,7 +26,7 @@ export function Footer() {
               <Github size={20} />
             </Link>
             <Link
-              href="www.linkedin.com/in/aurel-noe-kenfack-b137b01a2"
+              href="https://www.linkedin.com/in/aurel-noe-kenfack-b137b01a2/"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full hover:bg-accent transition-colors"
