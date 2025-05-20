@@ -17,7 +17,7 @@ export function Footer() {
 
           <div className="flex items-center gap-4">
             <Link
-              href="https://github.com"
+              href="https://github.com/NoeKen"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full hover:bg-accent transition-colors"
@@ -26,7 +26,7 @@ export function Footer() {
               <Github size={20} />
             </Link>
             <Link
-              href="https://linkedin.com"
+              href="www.linkedin.com/in/aurel-noe-kenfack-b137b01a2"
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 rounded-full hover:bg-accent transition-colors"
@@ -35,7 +35,7 @@ export function Footer() {
               <Linkedin size={20} />
             </Link>
             <Link
-              href="mailto:contact@example.com"
+              href="mailto:kenfackaurel1@gmail.com"
               className="p-2 rounded-full hover:bg-accent transition-colors"
               aria-label="Email"
             >

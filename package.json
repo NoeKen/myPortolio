@@ -47,6 +47,7 @@
     "@t3-oss/env-nextjs": "^0.12.0",
     "@types/nodemailer": "^6.4.17",
     "@types/three": "^0.174.0",
+    "@vercel/analytics": "^1.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "cmdk": "^1.0.4",
