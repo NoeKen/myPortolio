@@ -12,9 +12,9 @@ export function Hero() {
         <motion.img
           src="/images/profileN.png"
           alt="Photo de profil KLAN"
-          className="absolute bottom-40  left-0 w-24 md:w-96 opacity-10 z-0 pointer-events-none object-contain hidden md:block"
+          className="absolute bottom-40  2xl:left-20 w-24 md:w-96 opacity-10 z-0 pointer-events-none object-contain hidden xl:block"
           initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 0.8, x: 0 }}
+          animate={{ opacity: 0.9, x: 0 }}
           transition={{ duration: 1.2 }}
         />
         <div className="container px-4 md:px-6">
