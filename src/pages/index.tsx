@@ -6,6 +6,7 @@ import { About } from "@/components/home/About";
 import { Skills } from "@/components/home/Skills";
 import { Projects } from "@/components/home/Projects";
 import { Contact } from "@/components/home/Contact";
+import { ProjectsCarousel } from "@/components/home/ProjectsCarousel";
 
 // CV URL can be hardcoded here if needed, e.g.
 // const staticCvUrl = "/path/to/your/cv.pdf"; 
@@ -25,7 +26,8 @@ export default function Home() {
         <Hero />
         <About />
         <Skills />
-        <Projects />
+        <ProjectsCarousel />
+        {/* <Projects /> */}
         <Contact />
       </Layout>
     </>

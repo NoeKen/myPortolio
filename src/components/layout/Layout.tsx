@@ -8,6 +8,7 @@ interface LayoutProps {
   cvUrl?: string;
 }
 
+
 export function Layout({ children, cvUrl }: LayoutProps) {
   return (
     <div className="flex min-h-screen flex-col">
