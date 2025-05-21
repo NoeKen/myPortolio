@@ -1,0 +1,131 @@
+[
+  {
+    "id": 1,
+    "title": "Application de Gestion de Congés",
+    "description": "Application mobile pour gérer les demandes de congés en entreprise.",
+    "images": [
+      "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=800",
+      "https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800"
+    ],
+    "tags": ["Power Apps", "Sharepoint", "Power Automate"],
+    "category": "development"
+  },
+  {
+    "id": 2,
+    "title": "Suivi des Dépenses Personnelles",
+    "description": "Application mobile pour suivre et analyser ses dépenses personnelles.",
+    "images": [
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
+      "https://images.unsplash.com/photo-1580910051073-dc918f5f2447?w=800"
+    ],
+    "tags": ["React Native", "SQLite", "Redux"],
+    "liveUrl": "https://play.google.com/store/apps/details?id=com.beaware&pcampaignid=web_share",
+    "githubUrl": "https://github.com/NoeKen/BeAware.git",
+    "category": "development"
+  },
+  {
+    "id": 4,
+    "title": "Application Mobile de Fitness",
+    "description": "Application mobile permettant aux utilisateurs de suivre leurs activités sportives et leur alimentation.",
+    "images": [
+      "https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+      "https://images.unsplash.com/photo-1518611012118-fb6c009d1980?w=800"
+    ],
+    "tags": ["React Native", "Firebase", "API REST", "UI/UX"],
+    "liveUrl": "https://example.com",
+    "githubUrl": "https://github.com",
+    "category": "development"
+  },
+  {
+    "id": 5,
+    "title": "Site Web de Portfolio",
+    "description": "Site web personnel pour présenter mes projets et compétences.",
+    "images": [
+      "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3",
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800"
+    ],
+    "tags": ["HTML", "CSS", "JavaScript", "React"],
+    "liveUrl": "https://monportfolio.com",
+    "githubUrl": "",
+    "category": "development"
+  },
+  {
+    "id": 3,
+    "title": "Logo pour entreprise de BTP",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "images": [
+      "/images/BTP/image1.png",
+      "/images/BTP/image2.png",
+      "/images/BTP/image3.png",
+      "/images/BTP/image4.png"
+    ],
+    "tags": ["Photoshop", "Design Research", "Logo Design"],
+    "category": "design"
+  },
+  {
+    "id": 3,
+    "title": "Flyers pour des formations en DAO",
+    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "images": [
+      "/images/DT_Design/image1.png",
+      "/images/DT_Design/image2.png",
+      "/images/DT_Design/image3.png"
+    ],
+    "tags": ["Photoshop", "Design Research", "Logo Design"],
+    "category": "design"
+  },
+  {
+    "id": 3,
+    "title": "Journée de la langue maternelle 2023",
+    "description": "Flyers pour cérémonie de la journee de la langue maternelle 2024.",
+    "images": [
+      "/images/JLM/image1.png",
+      "/images/JLM/image2.png",
+      "/images/JLM/image3.png",
+      "/images/JLM/image4.png",
+      "/images/JLM/image5.png",
+      "/images/JLM/image7.png",
+      "/images/JLM/image8.png"
+    ],
+    "tags": ["Photoshop", "Design Research", "Logo Design"],
+    "category": "design"
+  },
+  {
+    "id": 3,
+    "title": "Journée de la langue maternelle 2024 ",
+    "description": "Flyers pour cérémonie de la journee de la langue maternelle 2024.",
+    "images": [
+      "/images/JLM2024/image1.png",
+      "/images/JLM2024/image2.png",
+      "/images/JLM2024/image3.png",
+      "/images/JLM2024/image4.png"
+    ],
+    "tags": ["Photoshop", "Design Research", "Logo Design"],
+    "category": "design"
+  },
+  {
+    "id": 3,
+    "title": "Logo pour boutique de distribution d'appareils informatique",
+    "description": "Logo et mockup pour  boutique de distribution d'appareils informatique",
+    "images": [
+      "/images/Hight_Tech/image1.png",
+      "/images/Hight_Tech/image2.png"
+    ],
+    "tags": ["Photoshop", "Logo Design", "Mock-up", "Design Research"],
+    "category": "design"
+  },
+  {
+    "id": 3,
+    "title": "Calendriers ",
+    "description": "Calendriers professionnels et d'anniversaire.",
+    "images": [
+      "/images/Calendar/image1.png",
+      "/images/Calendar/image2.png",
+      "/images/Calendar/image3.png",
+      "/images/Calendar/image4.png",
+      "/images/Calendar/image5.png"
+    ],
+    "tags": ["Photoshop", "Design Research", "Logo Design"],
+    "category": "design"
+  }
+]
