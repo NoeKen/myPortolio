@@ -8,7 +8,7 @@ import { Analytics } from "@vercel/analytics/next";
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <AnimatePresence mode="wait">
+      <AnimatePresence mode="sync">
         <Component {...pageProps} />
         <Analytics />
       </AnimatePresence>
