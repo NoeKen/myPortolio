@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import { Github, Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
@@ -9,7 +8,16 @@ export function Footer() {
       <div className="container py-8 md:py-12">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex flex-col items-center md:items-start">
-            <Image src="/images/logo-t.png" width={80} height={70} alt="Logo KLAN"></Image>
+            <Link href="/" className="text-xl font-bold">
+              <Image
+                src="/images/logo.png"
+                width={50}
+                height={50}
+                alt="Logo KLAN"
+                className="h-8 w-auto rounded-md shadow-sm"
+              />
+              <span className="sr-only">Accueil</span> {/* Accessibilité */}
+            </Link>
             <p className="text-sm text-muted-foreground mt-1">
               © {new Date().getFullYear()} Tous droits réservés
             </p>
