@@ -34,25 +34,25 @@ export function Navbar({ cvUrl }: NavbarProps) {
             Accueil
           </Link>
           <Link
-            href="#about"
+            href="/#about"
             className="text-sm font-medium hover:text-primary transition-colors"
           >
             À propos
           </Link>
           <Link
-            href="#skills"
+            href="/#skills"
             className="text-sm font-medium hover:text-primary transition-colors"
           >
             Compétences
           </Link>
           <Link
-            href="#projects"
+            href="/#projects"
             className="text-sm font-medium hover:text-primary transition-colors"
           >
             Projets
           </Link>
           <Link
-            href="#contact"
+            href="/#contact"
             className="text-sm font-medium hover:text-primary transition-colors"
           >
             Contact
@@ -92,28 +92,28 @@ export function Navbar({ cvUrl }: NavbarProps) {
               Accueil
             </Link>
             <Link
-              href="#about"
+              href="/#about"
               className="text-sm font-medium hover:text-primary transition-colors"
               onClick={toggleMenu}
             >
               À propos
             </Link>
             <Link
-              href="#skills"
+              href="/#skills"
               className="text-sm font-medium hover:text-primary transition-colors"
               onClick={toggleMenu}
             >
               Compétences
             </Link>
             <Link
-              href="#projects"
+              href="/#projects"
               className="text-sm font-medium hover:text-primary transition-colors"
               onClick={toggleMenu}
             >
               Projets
             </Link>
             <Link
-              href="#contact"
+              href="/#contact"
               className="text-sm font-medium hover:text-primary transition-colors"
               onClick={toggleMenu}
             >
