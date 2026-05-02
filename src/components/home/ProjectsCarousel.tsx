@@ -39,8 +39,11 @@ export function ProjectsCarousel() {
         </div>
 
         <ProjectSwiper className="!pb-12 h-[420px]">
-          {filtered.map((project) => (
-            <SwiperSlide key={project.id} className="h-full">
+          {filtered.map((project, projectIndex) => (
+            <SwiperSlide
+              key={`${project.id}-${project.title}-${projectIndex}`}
+              className="h-full"
+            >
               <div className="h-full min-h-[420px] flex flex-col justify-between">
                 <ProjectCard project={project} />
               </div>

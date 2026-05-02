@@ -95,7 +95,7 @@ export function Hero() {
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: [0.25, 0.1, 0.25, 1] as const,
           }}
         />
       </section>

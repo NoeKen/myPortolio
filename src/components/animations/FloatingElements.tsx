@@ -15,14 +15,11 @@ interface FloatingShape {
 }
 
 export function FloatingElements() {
-  const [shapes, setShapes] = useState<FloatingShape[]>([]);
-
-  useEffect(() => {
-    // Generate random shapes
+  const [shapes] = useState<FloatingShape[]>(() => {
     const colors = ["#3b82f6", "#10b981", "#8b5cf6", "#f97316", "#ec4899"];
     const types: ("circle" | "square" | "triangle")[] = ["circle", "square", "triangle"];
-    
-    const newShapes: FloatingShape[] = Array.from({ length: 15 }, (_, i) => ({
+
+    return Array.from({ length: 15 }, (_, i) => ({
       id: i,
       x: Math.random() * 100,
       y: Math.random() * 100,
@@ -31,11 +28,9 @@ export function FloatingElements() {
       color: colors[Math.floor(Math.random() * colors.length)],
       duration: Math.random() * 20 + 15,
       delay: Math.random() * 5,
-      type: types[Math.floor(Math.random() * types.length)]
+      type: types[Math.floor(Math.random() * types.length)],
     }));
-    
-    setShapes(newShapes);
-  }, []);
+  });
 
   const renderShape = (shape: FloatingShape) => {
     switch (shape.type) {
@@ -61,7 +56,7 @@ export function FloatingElements() {
               duration: shape.duration,
               repeat: Infinity,
               delay: shape.delay,
-              ease: "easeInOut"
+              ease: [0.25, 0.1, 0.25, 1] as const
             }}
           />
         );
@@ -87,7 +82,7 @@ export function FloatingElements() {
               duration: shape.duration,
               repeat: Infinity,
               delay: shape.delay,
-              ease: "easeInOut"
+              ease: [0.25, 0.1, 0.25, 1] as const
             }}
           />
         );
@@ -115,7 +110,7 @@ export function FloatingElements() {
               duration: shape.duration,
               repeat: Infinity,
               delay: shape.delay,
-              ease: "easeInOut"
+              ease: [0.25, 0.1, 0.25, 1] as const
             }}
           />
         );
