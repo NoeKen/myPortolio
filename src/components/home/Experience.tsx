@@ -4,36 +4,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Calendar, MapPin } from "lucide-react";
 import Link from "next/link";
-
-const experiences = [
-  {
-    title: "Développeur Web Full-Stack — Stagiaire",
-    company: "Adven Conseil",
-    period: "Févr. 2026 – Mars 2026",
-    location: "Montréal, QC (À distance)",
-    description:
-      "Développement de composants React fonctionnels et API REST sécurisées avec JWT, dans un contexte Agile/Scrum.",
-    tags: ["React", "TypeScript", "Redux", "Supabase", "JWT"],
-  },
-  {
-    title: "Développeur Full-Stack",
-    company: "Pigiste indépendant",
-    period: "Déc. 2024 – Janv. 2026",
-    location: "Canada (Hybride)",
-    description:
-      "Applications Web complètes (React, Next.js, Node.js), gestion autonome du cycle de l'analyse à la mise en production.",
-    tags: ["React", "Next.js", "Node.js", "PostgreSQL", "Docker", "Vercel"],
-  },
-  {
-    title: "Développeur mobile React Native",
-    company: "Digital Studios",
-    period: "Mars 2021 – Janv. 2024",
-    location: "Yaoundé, Cameroun (Hybride)",
-    description:
-      "Applications multiplateformes de la maquette Figma à la publication sur Google Play et l'App Store.",
-    tags: ["React Native", "TypeScript", "Redux", "GraphQL", "CI/CD"],
-  },
-];
+import { experiences } from "@/datas/experiences";
 
 export function Experience() {
   return (

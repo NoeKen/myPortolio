@@ -10,8 +10,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <AnimatePresence mode="sync">
         <Component {...pageProps} />
-        <Analytics />
       </AnimatePresence>
+      <Analytics />
       <FloatingElements />
       <Toaster />
     </>

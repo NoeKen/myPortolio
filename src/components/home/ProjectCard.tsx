@@ -61,6 +61,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                       src={img}
                       alt={`${project.title} - ${index}`}
                       fill
+                      sizes="(max-width: 768px) 100vw, 40vw"
                       className="object-cover transition-transform hover:scale-105"
                     />
                   </div>
