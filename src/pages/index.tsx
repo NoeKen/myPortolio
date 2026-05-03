@@ -7,6 +7,8 @@ import { Skills } from "@/components/home/Skills";
 import { Projects } from "@/components/home/Projects";
 import { Contact } from "@/components/home/Contact";
 import { ProjectsCarousel } from "@/components/home/ProjectsCarousel";
+import { Experience } from "@/components/home/Experience";
+import { Formation } from "@/components/home/Formation";
 
 // CV URL can be hardcoded here if needed, e.g.
 // const staticCvUrl = "/path/to/your/cv.pdf"; 
@@ -17,8 +19,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Noé Kenfack</title>
-        <meta name="description" content="Portfolio professionnel d'un développeur analyste (Noé Kenfack) avec 3 ans d'expérience, compétences en design UI/UX et administration système." />
+        <title>Noé Kenfack — Développeur Fullstack</title>
+        <meta
+          name="description"
+          content="Portfolio de Noé Kenfack — Développeur Fullstack Web & Mobile basé à Montréal. Node.js, TypeScript, React, Next.js, PostgreSQL."
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
@@ -26,6 +31,8 @@ export default function Home() {
         <Hero />
         <About />
         <Skills />
+        <Experience />
+        <Formation />
         <ProjectsCarousel />
         {/* <Projects /> */}
         <Contact />

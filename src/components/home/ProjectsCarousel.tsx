@@ -13,15 +13,15 @@ import ProjectCard from "./ProjectCard";
 
 export function ProjectsCarousel() {
   const renderCategoryCarousel = (
-    category: "development" | "design" | "system"
+    category: "development" | "design" | "academic"
   ) => {
     const filtered = projects.filter((p) => p.category === category);
     if (filtered.length === 0) return null;
 
-    const categoryTitles = {
+    const categoryTitles: Record<"development" | "design" | "academic", string> = {
       development: "Développement",
       design: "Design",
-      system: "Administration Système",
+      academic: "Académiques",
     };
 
     return (
@@ -82,7 +82,6 @@ export function ProjectsCarousel() {
 
           {renderCategoryCarousel("development")}
           {renderCategoryCarousel("design")}
-          {renderCategoryCarousel("system")}
         </div>
       </SectionAnimation>
     </section>
