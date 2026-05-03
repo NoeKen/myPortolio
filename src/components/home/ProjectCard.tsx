@@ -41,32 +41,38 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <>
       <Card className="overflow-hidden h-full">
-        <div className="relative h-48 w-full overflow-hidden">
-          <CustomSwiper
-            spaceBetween={10}
-            slidesPerView={1}
-            className="rounded-md overflow-hidden"
-          >
-            {project.images.map((img, index) => (
-              <SwiperSlide key={index}>
-                <div
-                  className="relative h-48 w-full cursor-pointer"
-                  onClick={() => {
-                    setCurrentIndex(index);
-                    setLightboxOpen(true);
-                  }}
-                >
-                  <Image
-                    src={img}
-                    alt={`${project.title} - ${index}`}
-                    fill
-                    className="object-cover transition-transform hover:scale-105"
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-          </CustomSwiper>
-        </div>
+        {project.images && project.images.length > 0 ? (
+          <div className="relative h-48 w-full overflow-hidden">
+            <CustomSwiper
+              spaceBetween={10}
+              slidesPerView={1}
+              className="rounded-md overflow-hidden"
+            >
+              {project.images.map((img, index) => (
+                <SwiperSlide key={index}>
+                  <div
+                    className="relative h-48 w-full cursor-pointer"
+                    onClick={() => {
+                      setCurrentIndex(index);
+                      setLightboxOpen(true);
+                    }}
+                  >
+                    <Image
+                      src={img}
+                      alt={`${project.title} - ${index}`}
+                      fill
+                      className="object-cover transition-transform hover:scale-105"
+                    />
+                  </div>
+                </SwiperSlide>
+              ))}
+            </CustomSwiper>
+          </div>
+        ) : (
+          <div className="h-48 w-full bg-accent/30 flex items-center justify-center">
+            <span className="text-muted-foreground text-sm">Projet académique</span>
+          </div>
+        )}
 
         <CardHeader>
           <CardTitle>{project.title}</CardTitle>
@@ -125,7 +131,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         open={lightboxOpen}
         close={() => setLightboxOpen(false)}
         index={currentIndex}
-        slides={project.images?.map((img) => ({ src: img }))}
+        slides={(project.images ?? []).map((img) => ({ src: img }))}
         carousel={{ finite: true }} // ✅ Empêche le scroll infini
       />
     </>

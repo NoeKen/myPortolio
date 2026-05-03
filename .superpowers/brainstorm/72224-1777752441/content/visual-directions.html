@@ -1,0 +1,101 @@
+<h2>Quelle direction visuelle pour le portfolio ?</h2>
+<p class="subtitle">Clique sur celle qui te parle le plus — ou dis-moi dans le terminal.</p>
+
+<div class="cards" style="margin-top: 24px;">
+
+  <!-- Option A -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #0a0a0f; padding: 20px; min-height: 200px; position: relative; overflow: hidden;">
+      <!-- Dark tech aesthetic -->
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+        <div style="width: 28px; height: 28px; background: linear-gradient(135deg, #6366f1, #8b5cf6); border-radius: 6px;"></div>
+        <div style="color: #e2e8f0; font-size: 13px; font-weight: 600; letter-spacing: 1px;">NK</div>
+        <div style="margin-left: auto; display: flex; gap: 16px;">
+          <div style="color: #64748b; font-size: 11px;">About</div>
+          <div style="color: #64748b; font-size: 11px;">Work</div>
+          <div style="color: #64748b; font-size: 11px;">Contact</div>
+        </div>
+      </div>
+      <div style="margin-top: 20px;">
+        <div style="color: #6366f1; font-size: 11px; letter-spacing: 2px; font-family: monospace; margin-bottom: 8px;">FULLSTACK DEVELOPER</div>
+        <div style="color: #e2e8f0; font-size: 22px; font-weight: 800; line-height: 1.1; margin-bottom: 4px;">Aurel Noé</div>
+        <div style="color: #e2e8f0; font-size: 22px; font-weight: 800; line-height: 1.1; margin-bottom: 16px;">Kenfack</div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap;">
+          <div style="background: #6366f1; color: white; font-size: 10px; padding: 3px 8px; border-radius: 4px; font-family: monospace;">Node.js</div>
+          <div style="background: #1e293b; color: #94a3b8; font-size: 10px; padding: 3px 8px; border-radius: 4px; font-family: monospace;">TypeScript</div>
+          <div style="background: #1e293b; color: #94a3b8; font-size: 10px; padding: 3px 8px; border-radius: 4px; font-family: monospace;">React</div>
+          <div style="background: #1e293b; color: #94a3b8; font-size: 10px; padding: 3px 8px; border-radius: 4px; font-family: monospace;">Next.js</div>
+        </div>
+      </div>
+      <!-- Grid lines decoration -->
+      <div style="position: absolute; top: 0; right: 0; width: 120px; height: 120px; opacity: 0.08; background-image: linear-gradient(#6366f1 1px, transparent 1px), linear-gradient(90deg, #6366f1 1px, transparent 1px); background-size: 16px 16px;"></div>
+    </div>
+    <div class="card-body">
+      <h3>A — Dark Tech / Developer</h3>
+      <p>Fond sombre, accent violet/indigo, typographie monospace pour les labels. Esthétique dev affirmée. Grille technique subtile en décoration. Fort impact pour les recruteurs tech.</p>
+    </div>
+  </div>
+
+  <!-- Option B -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #fafaf9; padding: 20px; min-height: 200px; position: relative; overflow: hidden; border-bottom: 1px solid #e5e7eb;">
+      <!-- Clean light with bold typography -->
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+        <div style="width: 28px; height: 28px; background: #111; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 11px; font-weight: 700;">NK</div>
+        <div style="margin-left: auto; display: flex; gap: 16px;">
+          <div style="color: #6b7280; font-size: 11px;">Accueil</div>
+          <div style="color: #6b7280; font-size: 11px;">Expériences</div>
+          <div style="color: #6b7280; font-size: 11px;">Projets</div>
+        </div>
+      </div>
+      <div style="margin-top: 12px;">
+        <div style="font-size: 28px; font-weight: 900; color: #111; line-height: 1; letter-spacing: -1px; margin-bottom: 6px;">Développeur</div>
+        <div style="font-size: 28px; font-weight: 900; color: #111; line-height: 1; letter-spacing: -1px; margin-bottom: 6px; background: linear-gradient(90deg, #f97316, #ef4444); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Fullstack &</div>
+        <div style="font-size: 28px; font-weight: 900; color: #111; line-height: 1; letter-spacing: -1px; margin-bottom: 16px;">Designer</div>
+        <div style="display: flex; gap: 8px;">
+          <div style="background: #111; color: white; font-size: 10px; padding: 5px 12px; border-radius: 20px;">Voir mes projets →</div>
+          <div style="border: 1px solid #111; color: #111; font-size: 10px; padding: 5px 12px; border-radius: 20px;">Me contacter</div>
+        </div>
+      </div>
+      <div style="position: absolute; right: -20px; top: 10px; width: 100px; height: 100px; border-radius: 50%; background: linear-gradient(135deg, #f97316 0%, #ef4444 100%); opacity: 0.15;"></div>
+    </div>
+    <div class="card-body">
+      <h3>B — Light Bold / Editorial</h3>
+      <p>Fond clair, typographie massive, accent orange/rouge chaud. Style éditorial percutant, moderne sans être "dev only". Fonctionne pour freelance et entreprises.</p>
+    </div>
+  </div>
+
+  <!-- Option C -->
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%); padding: 20px; min-height: 200px; position: relative; overflow: hidden;">
+      <!-- Premium dark with teal/cyan accent -->
+      <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+        <div style="color: #e2e8f0; font-size: 13px; font-weight: 800; letter-spacing: 2px;">NOÉ <span style="color: #2dd4bf;">KENFACK</span></div>
+        <div style="margin-left: auto; display: flex; gap: 16px;">
+          <div style="color: #475569; font-size: 10px; letter-spacing: 1px; text-transform: uppercase;">Work</div>
+          <div style="color: #475569; font-size: 10px; letter-spacing: 1px; text-transform: uppercase;">Experience</div>
+          <div style="color: #2dd4bf; font-size: 10px; letter-spacing: 1px; text-transform: uppercase; border-bottom: 1px solid #2dd4bf; padding-bottom: 2px;">Hire me</div>
+        </div>
+      </div>
+      <div style="margin-top: 24px; display: flex; justify-content: space-between; align-items: flex-end;">
+        <div>
+          <div style="color: #2dd4bf; font-size: 10px; letter-spacing: 3px; text-transform: uppercase; font-weight: 600; margin-bottom: 10px;">Montréal · Canada</div>
+          <div style="color: #f8fafc; font-size: 20px; font-weight: 700; line-height: 1.2; max-width: 180px;">Fullstack Developer & UI Designer</div>
+        </div>
+        <div style="text-align: right;">
+          <div style="background: #2dd4bf; color: #0f172a; font-size: 10px; font-weight: 700; padding: 6px 14px; border-radius: 4px; margin-bottom: 6px;">3+ ans XP</div>
+          <div style="color: #475569; font-size: 9px; letter-spacing: 1px;">Node · React · PostgreSQL</div>
+        </div>
+      </div>
+      <div style="position: absolute; bottom: -30px; left: -30px; width: 140px; height: 140px; border-radius: 50%; border: 2px solid #2dd4bf; opacity: 0.12;"></div>
+      <div style="position: absolute; bottom: -10px; left: -10px; width: 90px; height: 90px; border-radius: 50%; border: 1px solid #2dd4bf; opacity: 0.08;"></div>
+    </div>
+    <div class="card-body">
+      <h3>C — Dark Premium / Indigo + Teal</h3>
+      <p>Dégradé sombre navy-indigo, accent teal/cyan, typographie élégante. Donne une impression premium et internationale. Idéal pour se démarquer dans un marché compétitif.</p>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top: 16px; text-align: center;">Clique sur une option ou réponds A, B ou C dans le terminal.</p>

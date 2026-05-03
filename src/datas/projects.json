@@ -24,114 +24,135 @@
     "category": "development"
   },
   {
-      "id": 5,
+    "id": 3,
     "title": "Site Web de Portfolio",
     "description": "Site web personnel pour présenter mes projets et compétences.",
-    "images": [
-        "/images/Portfolio/image2.png"
-    ],
-    "tags": ["HTML", "CSS", "JavaScript", "React","Next.js"],
+    "images": ["/images/Portfolio/image2.png"],
+    "tags": ["HTML", "CSS", "JavaScript", "React", "Next.js"],
     "liveUrl": "https://noekenfack.vercel.app/",
     "githubUrl": "",
     "category": "development"
-},
-{
-    "id": 3,
-    "title": "Logo pour entreprise de BTP",
-    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "images": [
-        "/images/BTP/image1.png",
-        "/images/BTP/image2.png",
-        "/images/BTP/image3.png",
-        "/images/BTP/image4.png"
-    ],
-    "tags": ["Photoshop", "Design Research", "Logo Design"],
-    "category": "design"
-},
+  },
   {
-    "id": 3,
+    "id": 6,
+    "title": "Elintys - Gestion événementielle",
+    "description": "Application web pour la gestion d'événements, incluant la planification, l'inscription et la communication avec les participants.",
+    "images": ["/images/Elintys/image1.png"],
+    "tags": ["Node.js", "Express", "React Native", "Next.js", "Docker", "Docker Compose", "API REST", "GitHub Actions"],
+    "category": "academic",
+    "githubUrl": "github.com",
+    "liveUrl": "https://elintys.com",
+    "period": "Oct. 2025 – Jan. 2026",
+    "institution": "Collège Bois-de-Boulogne"
+  },
+  {
+    "id": 7,
+    "title": "Plateforme e-commerce — Stack Microsoft",
+    "description": "Plateforme e-commerce complète (catalogue, panier, commandes, authentification) avec ASP.NET MVC, Entity Framework et SQL Server.",
+    "images": [],
+    "tags": ["ASP.NET MVC", "C#", "Entity Framework", "SQL Server", "T-SQL"],
+    "category": "academic",
+    "githubUrl": "",
+    "period": "Août – Nov. 2025",
+    "institution": "Collège Bois-de-Boulogne"
+  },
+  {
+    "id": 8,
+    "title": "Logo pour entreprise de BTP",
+    "description": "Création d'identité visuelle pour une entreprise de bâtiment et travaux publics.",
+    "images": [
+      "/images/BTP/image1.png",
+      "/images/BTP/image2.png",
+      "/images/BTP/image3.png",
+      "/images/BTP/image4.png"
+    ],
+    "tags": ["Photoshop", "Design Research", "Logo Design"],
+    "category": "design"
+  },
+  {
+    "id": 9,
     "title": "Flyers pour des formations en DAO",
-    "description": "lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "description": "Conception de supports visuels pour des formations en dessin assisté par ordinateur.",
     "images": [
-        "/images/DT_Design/image1.png",
-        "/images/DT_Design/image2.png",
-        "/images/DT_Design/image3.png"
+      "/images/DT_Design/image1.png",
+      "/images/DT_Design/image2.png",
+      "/images/DT_Design/image3.png"
     ],
     "tags": ["Photoshop", "Design Research", "Logo Design"],
     "category": "design"
-},
-{
-    "id": 3,
+  },
+  {
+    "id": 10,
     "title": "Journée de la langue maternelle 2023",
-    "description": "Flyers pour cérémonie de la journee de la langue maternelle 2024.",
+    "description": "Flyers pour cérémonie de la journée de la langue maternelle 2023.",
     "images": [
-        "/images/JLM/image1.png",
-        "/images/JLM/image2.png",
-        "/images/JLM/image3.png",
-        "/images/JLM/image4.png",
-        "/images/JLM/image5.png",
-        "/images/JLM/image7.png",
-        "/images/JLM/image8.png"
+      "/images/JLM/image1.png",
+      "/images/JLM/image2.png",
+      "/images/JLM/image3.png",
+      "/images/JLM/image4.png",
+      "/images/JLM/image5.png",
+      "/images/JLM/image7.png",
+      "/images/JLM/image8.png"
     ],
     "tags": ["Photoshop", "Design Research", "Logo Design"],
     "category": "design"
-},
-{
-    "id": 3,
-    "title": "Journée de la langue maternelle 2024 ",
-    "description": "Flyers pour cérémonie de la journee de la langue maternelle 2024.",
+  },
+  {
+    "id": 11,
+    "title": "Journée de la langue maternelle 2024",
+    "description": "Flyers pour cérémonie de la journée de la langue maternelle 2024.",
     "images": [
-        "/images/JLM2024/image1.png",
-        "/images/JLM2024/image2.png",
-        "/images/JLM2024/image3.png",
-        "/images/JLM2024/image4.png"
+      "/images/JLM2024/image1.png",
+      "/images/JLM2024/image2.png",
+      "/images/JLM2024/image3.png",
+      "/images/JLM2024/image4.png"
     ],
     "tags": ["Photoshop", "Design Research", "Logo Design"],
     "category": "design"
-},
-{
-    "id": 3,
-    "title": "Logo pour boutique de distribution d'appareils informatique",
-    "description": "Logo et mockup pour  boutique de distribution d'appareils informatique",
+  },
+  {
+    "id": 12,
+    "title": "Logo pour boutique d'appareils informatiques",
+    "description": "Logo et mockup pour boutique de distribution d'appareils informatiques.",
     "images": [
-        "/images/Hight_Tech/image1.png",
-        "/images/Hight_Tech/image2.png"
+      "/images/Hight_Tech/image1.png",
+      "/images/Hight_Tech/image2.png"
     ],
     "tags": ["Photoshop", "Logo Design", "Mock-up", "Design Research"],
     "category": "design"
-},
-{
-    "id": 3,
-    "title": "Calendriers ",
+  },
+  {
+    "id": 13,
+    "title": "Calendriers",
     "description": "Calendriers professionnels et d'anniversaire.",
     "images": [
-        "/images/Calendar/image1.png",
-        "/images/Calendar/image2.png",
-        "/images/Calendar/image3.png",
-        "/images/Calendar/image4.png",
-        "/images/Calendar/image5.png"
+      "/images/Calendar/image1.png",
+      "/images/Calendar/image2.png",
+      "/images/Calendar/image3.png",
+      "/images/Calendar/image4.png",
+      "/images/Calendar/image5.png"
     ],
     "tags": ["Photoshop", "Design Research", "Logo Design"],
     "category": "design"
-},
+  },
   {
-    "id": 3,
+    "id": 14,
     "title": "Logo Association",
-    "description": "Logo association des anciens de la communauté kribienne .",
+    "description": "Logo pour l'association des anciens de la communauté kribienne.",
     "images": ["/images/EIPF/image1.png"],
     "tags": ["Photoshop", "Design Research", "Logo Design"],
     "category": "design"
-},
+  },
   {
-      "id": 3,
-      "title": "HBD / HNY",
-      "description": "Affiche pour souhaiter Joyeux anniversaire et bonne année.",
-      "images": [
+    "id": 15,
+    "title": "HBD / HNY",
+    "description": "Affiches pour souhaiter Joyeux anniversaire et bonne année.",
+    "images": [
       "/images/HBD/image1.png",
       "/images/HBD/image2.png",
       "/images/HBD/image3.png"
     ],
     "tags": ["Photoshop", "Design Research", "Logo Design"],
     "category": "design"
-}
+  }
 ]
