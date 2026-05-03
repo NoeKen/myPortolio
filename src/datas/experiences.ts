@@ -5,7 +5,7 @@ export interface Experience {
   location: string;
   mode?: string;
   description?: string;
-  bullets?: string[];
+  bullets: string[];
   tags: string[];
 }
 
