@@ -46,6 +46,12 @@ export function Navbar({ cvUrl }: NavbarProps) {
             Compétences
           </Link>
           <Link
+            href="/experience"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
+            Expériences
+          </Link>
+          <Link
             href="/#projects"
             className="text-sm font-medium hover:text-primary transition-colors"
           >
@@ -104,6 +110,13 @@ export function Navbar({ cvUrl }: NavbarProps) {
               onClick={toggleMenu}
             >
               Compétences
+            </Link>
+            <Link
+              href="/experience"
+              className="text-sm font-medium hover:text-primary transition-colors"
+              onClick={toggleMenu}
+            >
+              Expériences
             </Link>
             <Link
               href="/#projects"

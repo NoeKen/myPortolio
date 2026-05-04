@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aperçu design — violet doux</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f8fafc; color: #111827; }
+
+  .page-title { text-align:center; padding: 28px 20px 10px; }
+  .page-title h1 { font-size: 18px; font-weight: 700; color: #111; }
+  .page-title p { font-size: 13px; color: #6b7280; margin-top:4px; }
+
+  .legend { display:flex; gap:16px; justify-content:center; padding:12px 20px 20px; flex-wrap:wrap; }
+  .legend-item { display:flex; align-items:center; gap:6px; font-size:11px; color:#6b7280; }
+  .dot { width:10px; height:10px; border-radius:50%; }
+
+  .sections { display: flex; flex-direction: column; gap: 0; max-width: 900px; margin: 0 auto; border: 1px solid #e5e7eb; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 24px rgba(0,0,0,0.08); }
+
+  /* ---- NAVBAR ---- */
+  .s-nav {
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 14px 32px;
+    display: flex; align-items:center; justify-content:space-between;
+  }
+  .s-nav .logo { font-weight: 700; font-size: 15px; color: #7c3aed; letter-spacing: -.02em; }
+  .s-nav .nav-links { display:flex; gap:20px; }
+  .s-nav .nav-links a { font-size: 12px; color: #6b7280; text-decoration:none; }
+  .s-nav .nav-links a.active { color: #7c3aed; font-weight:600; }
+  .s-nav .nav-btn { background: #7c3aed; color: #fff; font-size: 11px; font-weight:600; padding: 6px 14px; border-radius: 6px; border:none; cursor:pointer; }
+
+  /* ---- HERO ---- */
+  .s-hero {
+    background: #fff;
+    padding: 48px 32px 40px;
+    display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items:center;
+  }
+  .hero-badge {
+    display: inline-flex; align-items:center; gap:6px;
+    background: rgba(124,58,237,0.08); border: 1px solid rgba(124,58,237,0.3);
+    color: #7c3aed; padding: 4px 12px; border-radius: 20px; font-size: 11px; font-weight:500;
+    margin-bottom: 16px;
+  }
+  .hero-badge::before { content:''; width:6px; height:6px; border-radius:50%; background:#7c3aed; }
+  .hero-name { font-size: 28px; font-weight: 800; letter-spacing: -.03em; color: #111827; line-height:1.1; margin-bottom:8px; }
+  .hero-title { font-size: 14px; color: #374151; font-weight:500; margin-bottom:12px; }
+  .hero-pills { display:flex; gap:6px; flex-wrap:wrap; margin-bottom:16px; }
+  .pill { background: rgba(124,58,237,0.08); color: #7c3aed; font-size: 10px; font-weight:600; padding: 3px 9px; border-radius: 5px; }
+  .hero-desc { font-size: 12px; color: #6b7280; line-height: 1.6; max-width: 420px; margin-bottom:20px; }
+  .hero-btns { display:flex; gap:10px; }
+  .btn-primary { background: #7c3aed; color: #fff; font-size: 12px; font-weight:600; padding: 9px 18px; border-radius: 7px; border:none; cursor:pointer; }
+  .btn-outline { background: transparent; color: #7c3aed; font-size: 12px; font-weight:600; padding: 9px 18px; border-radius: 7px; border: 1.5px solid #7c3aed; cursor:pointer; }
+  .hero-photo { position:relative; }
+  .photo-ring { width: 140px; height: 140px; border-radius: 50%; background: linear-gradient(135deg,rgba(124,58,237,0.15),rgba(139,92,246,0.05)); border: 3px solid rgba(124,58,237,0.25); display:flex; align-items:center; justify-content:center; overflow:hidden; }
+  .photo-placeholder { width:100%; height:100%; background: linear-gradient(135deg,#ede9fe,#ddd6fe); display:flex; align-items:center; justify-content:center; font-size:32px; }
+  .hero-stats { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-top:14px; }
+  .stat { background: rgba(124,58,237,0.06); border-radius: 8px; padding: 8px 6px; text-align:center; }
+  .stat-val { font-size: 16px; font-weight:800; color: #7c3aed; }
+  .stat-lbl { font-size: 9px; color: #9ca3af; margin-top:2px; }
+
+  /* ---- ABOUT ---- */
+  .s-about {
+    background: rgba(124,58,237,0.03);
+    padding: 36px 32px;
+  }
+  .section-title { text-align:center; font-size:20px; font-weight:800; letter-spacing:-.02em; margin-bottom:6px; }
+  .section-sub { text-align:center; font-size:12px; color:#6b7280; margin-bottom:24px; }
+  .about-cards { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  .about-card { background:#fff; border-radius:10px; padding:18px; border: 1px solid rgba(124,58,237,0.1); }
+  .about-icon { width:36px; height:36px; border-radius:50%; background:rgba(124,58,237,0.1); display:flex; align-items:center; justify-content:center; margin:0 auto 12px; font-size:16px; }
+  .about-card h3 { font-size:12px; font-weight:700; text-align:center; margin-bottom:6px; }
+  .about-card p { font-size:10px; color:#6b7280; text-align:center; line-height:1.5; }
+
+  /* ---- SKILLS ---- */
+  .s-skills { background:#fff; padding:36px 32px; }
+  .skill-tabs { display:flex; gap:6px; flex-wrap:wrap; justify-content:center; margin-bottom:20px; }
+  .skill-tab { padding: 5px 14px; border-radius:20px; font-size:11px; font-weight:500; border:none; cursor:pointer; background:#f3f4f6; color:#6b7280; }
+  .skill-tab.active { background:#7c3aed; color:#fff; }
+  .skill-badges { display:flex; gap:8px; flex-wrap:wrap; justify-content:center; }
+  .skill-badge { background: rgba(124,58,237,0.08); color:#7c3aed; font-size:11px; font-weight:500; padding:5px 12px; border-radius:6px; }
+
+  /* ---- FOOTER ---- */
+  .s-footer { background:#fff; border-top:1px solid #f0f0f0; padding:18px 32px; display:flex; align-items:center; justify-content:space-between; }
+  .s-footer .logo { font-size:13px; font-weight:700; color:#7c3aed; }
+  .s-footer p { font-size:11px; color:#9ca3af; }
+
+  /* ---- WHAT CHANGES ---- */
+  .changes { max-width:900px; margin:24px auto; padding:0 16px; }
+  .changes-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+  .change-card { background:#fff; border-radius:10px; padding:16px; border:1px solid #e5e7eb; }
+  .change-card h4 { font-size:12px; font-weight:700; color:#374151; margin-bottom:8px; }
+  .change-row { display:flex; align-items:center; gap:8px; margin-bottom:6px; font-size:11px; }
+  .swatch { width:14px; height:14px; border-radius:3px; flex-shrink:0; }
+  .arrow { color:#9ca3af; font-size:10px; }
+  .var-name { color:#6b7280; font-family:monospace; font-size:10px; }
+</style>
+</head>
+<body>
+
+<div class="page-title">
+  <h1>Aperçu — Violet Doux sur thème clair</h1>
+  <p>Mode sombre inchangé · Violet #7c3aed remplace le noir des accents en mode clair</p>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="dot" style="background:#7c3aed"></div> violet-600 — boutons, active</div>
+  <div class="legend-item"><div class="dot" style="background:rgba(124,58,237,0.15);border:1px solid #8b5cf6"></div> violet teinté — badges, fonds</div>
+  <div class="legend-item"><div class="dot" style="background:#111827"></div> noir — texte principal inchangé</div>
+</div>
+
+<div class="sections">
+
+  <!-- NAVBAR -->
+  <div class="s-nav">
+    <div class="logo">NK</div>
+    <div class="nav-links">
+      <a href="#" class="active">Accueil</a>
+      <a href="#">Projets</a>
+      <a href="#">Expérience</a>
+      <a href="#">Contact</a>
+    </div>
+    <button class="nav-btn">CV ↓</button>
+  </div>
+
+  <!-- HERO -->
+  <div class="s-hero">
+    <div>
+      <div class="hero-badge">Disponible pour opportunités</div>
+      <div class="hero-name">Aurel Noé Kenfack</div>
+      <div class="hero-title">Développeur Fullstack & Product Builder</div>
+      <div class="hero-pills">
+        <span class="pill">Node.js</span>
+        <span class="pill">TypeScript</span>
+        <span class="pill">React</span>
+        <span class="pill">Next.js</span>
+        <span class="pill">PostgreSQL</span>
+      </div>
+      <div class="hero-desc">
+        Développeur fullstack web et mobile basé à Montréal, avec plus de 3 ans d'expérience dans l'écosystème JavaScript.
+      </div>
+      <div class="hero-btns">
+        <button class="btn-primary">Voir mes projets →</button>
+        <button class="btn-outline">Me contacter</button>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <div class="photo-ring">
+        <div class="photo-placeholder">👤</div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-val">3+</div><div class="stat-lbl">ans exp.</div></div>
+        <div class="stat"><div class="stat-val">Full</div><div class="stat-lbl">cycle</div></div>
+        <div class="stat"><div class="stat-val">Web</div><div class="stat-lbl">& Mobile</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="s-about">
+    <div class="section-title">À propos de moi</div>
+    <div class="section-sub">Fort de plus de 3 ans d'expérience, je conçois des solutions numériques complètes.</div>
+    <div class="about-cards">
+      <div class="about-card">
+        <div class="about-icon">⌨️</div>
+        <h3>Développement Fullstack</h3>
+        <p>Node.js, TypeScript, React/Next.js — de l'API REST aux microservices.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">🖥️</div>
+        <h3>Architecture & DevOps</h3>
+        <p>Docker, CI/CD, Vercel, Firebase et Google Cloud.</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">🎨</div>
+        <h3>Design & UX</h3>
+        <p>Interfaces soignées avec Figma et Adobe XD.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SKILLS -->
+  <div class="s-skills">
+    <div class="section-title">Mes compétences</div>
+    <div class="section-sub">Stack technique complet — du backend à l'infrastructure.</div>
+    <div class="skill-tabs">
+      <button class="skill-tab active">Backend</button>
+      <button class="skill-tab">Frontend</button>
+      <button class="skill-tab">DevOps</button>
+      <button class="skill-tab">Design</button>
+      <button class="skill-tab">Mobile</button>
+    </div>
+    <div class="skill-badges">
+      <span class="skill-badge">Node.js</span>
+      <span class="skill-badge">Express.js</span>
+      <span class="skill-badge">TypeScript</span>
+      <span class="skill-badge">API REST</span>
+      <span class="skill-badge">JWT</span>
+      <span class="skill-badge">Microservices</span>
+      <span class="skill-badge">Architecture BFF</span>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="s-footer">
+    <div class="logo">Noé Kenfack</div>
+    <p>© 2026 · Montréal</p>
+  </div>
+
+</div>
+
+<!-- CE QUI CHANGE -->
+<div class="changes">
+  <h3 style="font-size:14px;font-weight:700;color:#374151;margin-bottom:12px;text-align:center;">Ce qui change dans le code</h3>
+  <div class="changes-grid">
+    <div class="change-card">
+      <h4>globals.css — variables CSS</h4>
+      <div class="change-row">
+        <div class="swatch" style="background:#1a1a2e"></div>
+        <span class="arrow">→</span>
+        <div class="swatch" style="background:#7c3aed"></div>
+        <span class="var-name">--primary (boutons, active)</span>
+      </div>
+      <div class="change-row">
+        <div class="swatch" style="background:#f4f4f5"></div>
+        <span class="arrow">→</span>
+        <div class="swatch" style="background:rgba(124,58,237,0.08);border:1px solid #e5e7eb"></div>
+        <span class="var-name">--accent (fonds section)</span>
+      </div>
+      <div class="change-row">
+        <div class="swatch" style="background:#3f3f46"></div>
+        <span class="arrow">→</span>
+        <div class="swatch" style="background:#7c3aed"></div>
+        <span class="var-name">--ring (focus outline)</span>
+      </div>
+    </div>
+    <div class="change-card">
+      <h4>Composants touchés automatiquement</h4>
+      <div class="change-row" style="margin-bottom:4px;"><span style="color:#7c3aed;font-size:13px;">✓</span><span style="font-size:11px;color:#374151;">Tous les &lt;Button&gt; primary</span></div>
+      <div class="change-row" style="margin-bottom:4px;"><span style="color:#7c3aed;font-size:13px;">✓</span><span style="font-size:11px;color:#374151;">Badge "Disponible" + badges stack</span></div>
+      <div class="change-row" style="margin-bottom:4px;"><span style="color:#7c3aed;font-size:13px;">✓</span><span style="font-size:11px;color:#374151;">Anneau photo (ring-primary/20)</span></div>
+      <div class="change-row" style="margin-bottom:4px;"><span style="color:#7c3aed;font-size:13px;">✓</span><span style="font-size:11px;color:#374151;">Onglets actifs Skills</span></div>
+      <div class="change-row"><span style="color:#7c3aed;font-size:13px;">✓</span><span style="font-size:11px;color:#374151;">Stats Hero (text-primary)</span></div>
+    </div>
+  </div>
+  <p style="font-size:11px;color:#9ca3af;text-align:center;margin-top:12px;">Uniquement globals.css · Mode sombre inchangé · Aucun composant modifié individuellement</p>
+</div>
+
+</body>
+</html>

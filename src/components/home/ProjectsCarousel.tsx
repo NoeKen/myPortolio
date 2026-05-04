@@ -13,15 +13,15 @@ import ProjectCard from "./ProjectCard";
 
 export function ProjectsCarousel() {
   const renderCategoryCarousel = (
-    category: "development" | "design" | "system"
+    category: "development" | "design" | "academic"
   ) => {
     const filtered = projects.filter((p) => p.category === category);
     if (filtered.length === 0) return null;
 
-    const categoryTitles = {
+    const categoryTitles: Record<"development" | "design" | "academic", string> = {
       development: "Développement",
       design: "Design",
-      system: "Administration Système",
+      academic: "Académiques",
     };
 
     return (
@@ -39,8 +39,11 @@ export function ProjectsCarousel() {
         </div>
 
         <ProjectSwiper className="!pb-12 h-[420px]">
-          {filtered.map((project) => (
-            <SwiperSlide key={project.id} className="h-full">
+          {filtered.map((project, projectIndex) => (
+            <SwiperSlide
+              key={`${project.id}-${project.title}-${projectIndex}`}
+              className="h-full"
+            >
               <div className="h-full min-h-[420px] flex flex-col justify-between">
                 <ProjectCard project={project} />
               </div>
@@ -49,8 +52,8 @@ export function ProjectsCarousel() {
         </ProjectSwiper>
 
         {/* Bouton voir tout */}
-        <div className="mt-6 text-center">
-          <Link href={`/projects?cat=${category}`}>
+        {/* <div className="mt-6 text-center">
+          <Link href={`/Projects/#${categoryTitles[category]}`}>
             <Button
               variant="link"
               className="text-sm text-primary hover:underline"
@@ -58,7 +61,7 @@ export function ProjectsCarousel() {
               Voir tous les projets {categoryTitles[category].toLowerCase()}
             </Button>
           </Link>
-        </div>
+        </div> */}
       </div>
     );
   };
@@ -79,7 +82,6 @@ export function ProjectsCarousel() {
 
           {renderCategoryCarousel("development")}
           {renderCategoryCarousel("design")}
-          {renderCategoryCarousel("system")}
         </div>
       </SectionAnimation>
     </section>

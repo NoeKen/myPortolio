@@ -1,0 +1,76 @@
+<h2>Direction visuelle — quelle ambiance ?</h2>
+<p class="subtitle">Même base technique (shadcn/ui + Tailwind), mais quel ton visuel ?</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #0a0a0f; padding: 20px; font-family: monospace;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+        <div style="width:8px;height:8px;background:#6366f1;border-radius:50%;box-shadow:0 0 8px #6366f1;"></div>
+        <span style="color:#6366f1;font-size:11px;letter-spacing:2px;text-transform:uppercase;">FULLSTACK DEV</span>
+      </div>
+      <div style="color:#fff;font-size:22px;font-weight:800;line-height:1.1;">Aurel Noé<br/>Kenfack</div>
+      <div style="color:#6366f1;font-size:12px;margin-top:8px;">Node.js · TypeScript · React</div>
+      <div style="margin-top:16px;display:flex;gap:8px;">
+        <div style="background:#6366f1;color:#fff;padding:6px 14px;border-radius:4px;font-size:11px;">Voir projets</div>
+        <div style="border:1px solid #6366f1;color:#6366f1;padding:6px 14px;border-radius:4px;font-size:11px;">Contact</div>
+      </div>
+      <div style="margin-top:16px;display:flex;gap:6px;">
+        <div style="background:#6366f1;opacity:0.15;width:40px;height:3px;border-radius:2px;"></div>
+        <div style="background:#6366f1;width:20px;height:3px;border-radius:2px;"></div>
+        <div style="background:#6366f1;opacity:0.15;width:30px;height:3px;border-radius:2px;"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Violet · Tech moderne</h3>
+      <p>Fond sombre, accent indigo/violet. Ambiance dev senior, entreprise tech. Clair, assertif.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #f8f9fa; padding: 20px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+        <div style="width:8px;height:8px;background:#0070f3;border-radius:50%;"></div>
+        <span style="color:#0070f3;font-size:11px;letter-spacing:2px;text-transform:uppercase;">PORTFOLIO</span>
+      </div>
+      <div style="color:#111;font-size:22px;font-weight:800;line-height:1.1;">Aurel Noé<br/>Kenfack</div>
+      <div style="color:#555;font-size:12px;margin-top:8px;">Développeur Fullstack & Designer</div>
+      <div style="margin-top:16px;display:flex;gap:8px;">
+        <div style="background:#0070f3;color:#fff;padding:6px 14px;border-radius:4px;font-size:11px;">Voir projets</div>
+        <div style="border:1px solid #0070f3;color:#0070f3;padding:6px 14px;border-radius:4px;font-size:11px;">Contact</div>
+      </div>
+      <div style="margin-top:16px; height:3px; background: linear-gradient(90deg, #0070f3, #00b4d8); border-radius:2px; width:60%;"></div>
+    </div>
+    <div class="card-body">
+      <h3>Bleu · Propre & professionnel</h3>
+      <p>Fond clair, accent bleu electric. Ambiance product/SaaS. Minimaliste, lisible, polyvalent.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="c" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: linear-gradient(135deg, #0d1117 60%, #1a1a2e); padding: 20px;">
+      <div style="display:flex; align-items:center; gap:10px; margin-bottom:12px;">
+        <div style="width:8px;height:8px;background:#00d4aa;border-radius:50%;box-shadow:0 0 8px #00d4aa;"></div>
+        <span style="color:#00d4aa;font-size:11px;letter-spacing:2px;text-transform:uppercase;">DEV · DESIGN</span>
+      </div>
+      <div style="color:#fff;font-size:22px;font-weight:800;line-height:1.1;">Aurel Noé<br/>Kenfack</div>
+      <div style="color:#00d4aa;font-size:12px;margin-top:8px;">Fullstack · Montréal, QC</div>
+      <div style="margin-top:16px;display:flex;gap:8px;">
+        <div style="background:#00d4aa;color:#0d1117;padding:6px 14px;border-radius:4px;font-size:11px;font-weight:700;">Voir projets</div>
+        <div style="border:1px solid rgba(255,255,255,0.2);color:#fff;padding:6px 14px;border-radius:4px;font-size:11px;">Contact</div>
+      </div>
+      <div style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;">
+        <div style="background:rgba(0,212,170,0.1);border:1px solid rgba(0,212,170,0.3);height:20px;border-radius:3px;"></div>
+        <div style="background:rgba(0,212,170,0.2);border:1px solid rgba(0,212,170,0.4);height:20px;border-radius:3px;"></div>
+        <div style="background:rgba(0,212,170,0.05);border:1px solid rgba(0,212,170,0.2);height:20px;border-radius:3px;"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Vert émeraude · Dev créatif</h3>
+      <p>Fond sombre avec accent vert/teal. Ambiance fullstack créatif, freelance premium. Original, mémorable.</p>
+    </div>
+  </div>
+
+</div>
+
+<p class="subtitle" style="margin-top:24px;">Clique sur une carte pour sélectionner, puis réponds dans le terminal.</p>

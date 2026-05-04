@@ -1,0 +1,101 @@
+<h2>Quelle direction de couleur pour ton portfolio ?</h2>
+<p class="subtitle">Chaque option change la couleur principale (boutons, badges, accents, icônes) tout en gardant la structure actuelle.</p>
+
+<div class="cards">
+
+  <!-- Option A: Indigo / Violet -->
+  <div class="card" data-choice="indigo" onclick="toggleSelect(this)">
+    <div class="card-image" style="background: #0f0f1a; padding: 20px; border-radius: 8px;">
+      <!-- Palette swatches -->
+      <div style="display:flex; gap:8px; margin-bottom:14px;">
+        <div style="width:36px;height:36px;border-radius:8px;background:#6366f1;"></div>
+        <div style="width:36px;height:36px;border-radius:8px;background:#818cf8;"></div>
+        <div style="width:36px;height:36px;border-radius:8px;background:#c7d2fe;"></div>
+        <div style="width:36px;height:36px;border-radius:8px;background:#1e1b4b;"></div>
+        <div style="width:36px;height:36px;border-radius:8px;background:#f8fafc;"></div>
+      </div>
+      <!-- Mini hero mockup -->
+      <div style="background:#111827;border-radius:6px;padding:12px;font-size:11px;color:#e2e8f0;">
+        <div style="display:inline-block;background:rgba(99,102,241,0.15);border:1px solid rgba(99,102,241,0.4);color:#818cf8;padding:2px 8px;border-radius:20px;font-size:10px;margin-bottom:8px;">Disponible pour opportunités</div>
+        <div style="font-weight:700;font-size:15px;margin-bottom:4px;color:#f1f5f9;">Aurel Noé Kenfack</div>
+        <div style="color:#94a3b8;font-size:10px;margin-bottom:8px;">Développeur Fullstack & Product Builder</div>
+        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:10px;">
+          <span style="background:rgba(99,102,241,0.15);color:#a5b4fc;padding:2px 6px;border-radius:4px;font-size:9px;">Node.js</span>
+          <span style="background:rgba(99,102,241,0.15);color:#a5b4fc;padding:2px 6px;border-radius:4px;font-size:9px;">TypeScript</span>
+          <span style="background:rgba(99,102,241,0.15);color:#a5b4fc;padding:2px 6px;border-radius:4px;font-size:9px;">React</span>
+        </div>
+        <div style="display:flex;gap:6px;">
+          <span style="background:#6366f1;color:#fff;padding:4px 10px;border-radius:5px;font-size:9px;">Voir mes projets →</span>
+          <span style="border:1px solid #6366f1;color:#818cf8;padding:4px 10px;border-radius:5px;font-size:9px;">Me contacter</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Indigo / Violet</h3>
+      <p>Tech élégant, professionnel et moderne. Très courant dans l'univers SaaS et dev tools. Sérieux sans être froid.</p>
+    </div>
+  </div>
+
+  <!-- Option B: Emerald / Teal -->
+  <div class="card" data-choice="emerald" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#0a1a14;padding:20px;border-radius:8px;">
+      <div style="display:flex;gap:8px;margin-bottom:14px;">
+        <div style="width:36px;height:36px;border-radius:8px;background:#10b981;"></div>
+        <div style="width:36px;height:36px;border-radius:8px;background:#34d399;"></div>
+        <div style="width:36px;height:36px;border-radius:8px;background:#a7f3d0;"></div>
+        <div style="width:36px;height:36px;border-radius:8px;background:#064e3b;"></div>
+        <div style="width:36px;height:36px;border-radius:8px;background:#f0fdf4;"></div>
+      </div>
+      <div style="background:#111827;border-radius:6px;padding:12px;font-size:11px;color:#e2e8f0;">
+        <div style="display:inline-block;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.4);color:#34d399;padding:2px 8px;border-radius:20px;font-size:10px;margin-bottom:8px;">Disponible pour opportunités</div>
+        <div style="font-weight:700;font-size:15px;margin-bottom:4px;color:#f1f5f9;">Aurel Noé Kenfack</div>
+        <div style="color:#94a3b8;font-size:10px;margin-bottom:8px;">Développeur Fullstack & Product Builder</div>
+        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:10px;">
+          <span style="background:rgba(16,185,129,0.15);color:#6ee7b7;padding:2px 6px;border-radius:4px;font-size:9px;">Node.js</span>
+          <span style="background:rgba(16,185,129,0.15);color:#6ee7b7;padding:2px 6px;border-radius:4px;font-size:9px;">TypeScript</span>
+          <span style="background:rgba(16,185,129,0.15);color:#6ee7b7;padding:2px 6px;border-radius:4px;font-size:9px;">React</span>
+        </div>
+        <div style="display:flex;gap:6px;">
+          <span style="background:#10b981;color:#fff;padding:4px 10px;border-radius:5px;font-size:9px;">Voir mes projets →</span>
+          <span style="border:1px solid #10b981;color:#34d399;padding:4px 10px;border-radius:5px;font-size:9px;">Me contacter</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Émeraude / Teal</h3>
+      <p>Frais, vivant, optimiste. Associé à la croissance et au dynamisme. Rare dans les portfolios dev — se démarque bien.</p>
+    </div>
+  </div>
+
+  <!-- Option C: Amber / Orange -->
+  <div class="card" data-choice="amber" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#1a0f00;padding:20px;border-radius:8px;">
+      <div style="display:flex;gap:8px;margin-bottom:14px;">
+        <div style="width:36px;height:36px;border-radius:8px;background:#f59e0b;"></div>
+        <div style="width:36px;height:36px;border-radius:8px;background:#fbbf24;"></div>
+        <div style="width:36px;height:36px;border-radius:8px;background:#fde68a;"></div>
+        <div style="width:36px;height:36px;border-radius:8px;background:#78350f;"></div>
+        <div style="width:36px;height:36px;border-radius:8px;background:#fffbeb;"></div>
+      </div>
+      <div style="background:#111827;border-radius:6px;padding:12px;font-size:11px;color:#e2e8f0;">
+        <div style="display:inline-block;background:rgba(245,158,11,0.15);border:1px solid rgba(245,158,11,0.4);color:#fbbf24;padding:2px 8px;border-radius:20px;font-size:10px;margin-bottom:8px;">Disponible pour opportunités</div>
+        <div style="font-weight:700;font-size:15px;margin-bottom:4px;color:#f1f5f9;">Aurel Noé Kenfack</div>
+        <div style="color:#94a3b8;font-size:10px;margin-bottom:8px;">Développeur Fullstack & Product Builder</div>
+        <div style="display:flex;gap:4px;flex-wrap:wrap;margin-bottom:10px;">
+          <span style="background:rgba(245,158,11,0.15);color:#fcd34d;padding:2px 6px;border-radius:4px;font-size:9px;">Node.js</span>
+          <span style="background:rgba(245,158,11,0.15);color:#fcd34d;padding:2px 6px;border-radius:4px;font-size:9px;">TypeScript</span>
+          <span style="background:rgba(245,158,11,0.15);color:#fcd34d;padding:2px 6px;border-radius:4px;font-size:9px;">React</span>
+        </div>
+        <div style="display:flex;gap:6px;">
+          <span style="background:#f59e0b;color:#1a0f00;padding:4px 10px;border-radius:5px;font-size:9px;font-weight:600;">Voir mes projets →</span>
+          <span style="border:1px solid #f59e0b;color:#fbbf24;padding:4px 10px;border-radius:5px;font-size:9px;">Me contacter</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Ambre / Orange</h3>
+      <p>Énergique, chaleureux, mémorable. Contraste fort sur fond sombre. Profil qui se souvient bien des recruteurs.</p>
+    </div>
+  </div>
+
+</div>
