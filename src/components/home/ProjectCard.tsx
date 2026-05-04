@@ -59,7 +59,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                   >
                     <Image
                       src={img}
-                      alt={`${project.title} - ${index}`}
+                      alt={
+                        index === 0
+                          ? `${project.title} — ${project.tags.slice(0, 4).join(", ")}`
+                          : `${project.title} — aperçu ${index + 1}`
+                      }
                       fill
                       sizes="(max-width: 768px) 100vw, 40vw"
                       className="object-cover transition-transform hover:scale-105"
