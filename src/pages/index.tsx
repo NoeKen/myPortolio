@@ -4,7 +4,7 @@ import { Hero } from "@/components/home/Hero";
 import { About } from "@/components/home/About";
 import { Skills } from "@/components/home/Skills";
 import { Contact } from "@/components/home/Contact";
-import { ProjectsCarousel } from "@/components/home/ProjectsCarousel";
+import { ProjectsSection } from "@/components/projects/ProjectsSection";
 import { Experience } from "@/components/home/Experience";
 import { Formation } from "@/components/home/Formation";
 import { SeoHead } from "@/components/SeoHead";
@@ -63,7 +63,7 @@ export default function Home() {
         <Skills />
         <Experience />
         <Formation />
-        <ProjectsCarousel />
+        <ProjectsSection mode="carousel" />
         {/* <Projects /> */}
         <Contact />
       </Layout>
