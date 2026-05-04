@@ -29,7 +29,7 @@
     "description": "Site web personnel pour présenter mes projets et compétences.",
     "images": ["/images/Portfolio/image2.png"],
     "tags": ["HTML", "CSS", "JavaScript", "React", "Next.js"],
-    "liveUrl": "https://noekenfack.vercel.app/",
+    "liveUrl": "#",
     "githubUrl": "",
     "category": "development"
   },
@@ -38,9 +38,9 @@
     "title": "Elintys - Gestion événementielle",
     "description": "Application web pour la gestion d'événements, incluant la planification, l'inscription et la communication avec les participants.",
     "images": ["/images/Elintys/image1.png"],
-    "tags": ["Node.js", "Express", "React Native", "Next.js", "Docker", "Docker Compose", "API REST", "GitHub Actions"],
-    "category": "academic",
-    "githubUrl": "github.com",
+    "tags": ["Node.js", "Express", "React Native", "Next.js", "Docker", "Docker Compose", "API REST", "GitHub Actions", "MongoDB", "Mongoose", "PostgreSQL", "Prisma"],
+    "category": "development",
+    "githubUrl": "",
     "liveUrl": "https://elintys.com",
     "period": "Oct. 2025 – Jan. 2026",
     "institution": "Collège Bois-de-Boulogne"

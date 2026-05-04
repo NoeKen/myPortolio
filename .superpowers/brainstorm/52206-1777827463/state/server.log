@@ -1,0 +1,6 @@
+{"type":"server-started","port":51704,"host":"127.0.0.1","url_host":"localhost","url":"http://localhost:51704","screen_dir":"/Users/admin/Desktop/Projects/myPortolio/.superpowers/brainstorm/52206-1777827463/content","state_dir":"/Users/admin/Desktop/Projects/myPortolio/.superpowers/brainstorm/52206-1777827463/state"}
+{"type":"screen-added","file":"/Users/admin/Desktop/Projects/myPortolio/.superpowers/brainstorm/52206-1777827463/content/color-palette.html"}
+{"type":"screen-added","file":"/Users/admin/Desktop/Projects/myPortolio/.superpowers/brainstorm/52206-1777827463/content/violet-intensity.html"}
+{"type":"screen-added","file":"/Users/admin/Desktop/Projects/myPortolio/.superpowers/brainstorm/52206-1777827463/content/dark-mode.html"}
+{"type":"screen-added","file":"/Users/admin/Desktop/Projects/myPortolio/.superpowers/brainstorm/52206-1777827463/content/design-preview.html"}
+{"type":"server-stopped","reason":"idle timeout"}

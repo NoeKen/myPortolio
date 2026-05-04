@@ -5,79 +5,9 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Calendar, MapPin } from "lucide-react";
+import { experiences } from "@/datas/experiences";
 
 const staticCvUrl = "/docs/CV_Noe-Kenfack.pdf";
-
-const experiences = [
-  {
-    title: "Développeur Web Full-Stack — Stagiaire",
-    company: "Adven Conseil",
-    period: "Févr. 2026 – Mars 2026",
-    location: "Montréal, QC",
-    mode: "À distance",
-    tags: ["React", "TypeScript", "Vite", "Redux", "Supabase", "JWT", "ESLint", "GitHub Actions"],
-    bullets: [
-      "Développé des composants React fonctionnels (hooks, TypeScript strict) et géré l'état applicatif avec Redux pour des flux de données complexes.",
-      "Conçu des API REST sécurisées avec JWT, validation serveur et authentification via Supabase (base de données, stockage).",
-      "Participé aux revues de code et aux cérémonies Agile/Scrum, respect des conventions ESLint et des échéances de sprint.",
-    ],
-  },
-  {
-    title: "Développeur Full-Stack",
-    company: "Pigiste indépendant",
-    period: "Déc. 2024 – Janv. 2026",
-    location: "Canada",
-    mode: "Hybride",
-    tags: ["React", "Next.js", "Node.js", "PostgreSQL", "Firebase", "JWT", "Docker", "CI/CD", "Vercel"],
-    bullets: [
-      "Conçu et développé des applications Web complètes (React, Next.js, Node.js), gestion autonome du cycle complet de l'analyse à la mise en production.",
-      "Modélisé des bases de données relationnelles (PostgreSQL) et implémenté des API REST avec authentification JWT.",
-      "Déployé sur Vercel et Firebase avec surveillance des métriques et optimisation des performances applicatives.",
-      "Géré les exigences clientèles, les délais et les retours de recette, livraisons itératives.",
-    ],
-  },
-  {
-    title: "Développeur mobile React Native",
-    company: "Digital Studios",
-    period: "Mars 2021 – Janv. 2024",
-    location: "Yaoundé, Cameroun",
-    mode: "Hybride",
-    tags: ["React Native", "TypeScript", "Redux", "GraphQL", "Node.js", "Django", "ESLint", "GitHub Actions"],
-    bullets: [
-      "Développé des applications multiplateformes (React Native + TypeScript), de la maquette Figma à la publication sur Google Play et l'App Store.",
-      "Consommé des API RESTful et GraphQL (Node.js, Django), intégration, gestion des erreurs réseau et optimisation des requêtes.",
-      "Mis en place des pipelines CI/CD avec GitHub Actions et appliqué ESLint pour garantir la maintenabilité du code en équipe.",
-      "Débogage, profilage et optimisation des performances (React Native Debugger, Flipper), revues de code et livraisons Agile régulières.",
-    ],
-  },
-  {
-    title: "Développeur systèmes & applications",
-    company: "Agence de Crédit et d'Épargne",
-    period: "Avr. 2023 – Janv. 2024",
-    location: "Yaoundé, Cameroun",
-    mode: "",
-    tags: ["React", "Node.js", "PostgreSQL", "Docker", "JWT", "GitHub", "Jenkins"],
-    bullets: [
-      "Développé et déployé des solutions Web internes sécurisées (React, Node.js, PostgreSQL) dans un contexte financier réglementé.",
-      "Conçu des API REST avec JWT, gestion des journaux d'audit et contrôle granulaire des accès, conforme aux exigences de sécurité bancaire.",
-      "Conteneurisé les applications avec Docker et mis en place un pipeline CI/CD (Jenkins, GitHub), réduction des risques de régression en production.",
-      "Optimisé les performances applicatives et modélisé des bases de données relationnelles (PostgreSQL).",
-      "Supervisé et formé des stagiaires en développement et en administration de systèmes.",
-    ],
-  },
-  {
-    title: "Développeur Android",
-    company: "SmartDev Community",
-    period: "Janv. 2021 – Mai 2021",
-    location: "Yaoundé, Cameroun",
-    mode: "Hybride",
-    tags: ["Kotlin", "Android Studio", "Firebase", "GitHub", "Material Design"],
-    bullets: [
-      "Développé des interfaces Android (Kotlin), intégré Firebase pour les données en temps réel et l'authentification.",
-      "Géré le versionnage du code avec GitHub dans un cadre collaboratif.",
-    ],
-  },
-];
 
 export default function ExperiencePage() {
   return (

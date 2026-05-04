@@ -5,12 +5,20 @@ import { GraduationCap } from "lucide-react";
 
 const formations = [
   {
-    degree: "AEC — Analyste-programmeur",
+    degree: "AEC - Analyste-programmeur",
     institution: "Collège Bois-de-Boulogne",
     location: "Montréal, QC",
     year: "Mars 2026",
     description:
       "Architectures applicatives, développement Web et mobile moderne (React, Node.js, ASP.NET), microservices, applications transactionnelles.",
+  },
+  {
+    degree: "ASP -  Lancement d’une entreprise",
+    institution: "EMICA",
+    location: "Montréal, QC",
+    year: "2024",
+    description:
+      "Formation axée sur la création et le développement d'entreprises, avec une approche pratique et innovante.",
   },
   {
     degree: "Baccalauréat en informatique",
@@ -34,7 +42,7 @@ export function Formation() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 ">
             {formations.map((f, i) => (
               <motion.div
                 key={f.degree}

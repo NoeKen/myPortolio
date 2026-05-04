@@ -76,11 +76,7 @@ export function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5 }}
             >
-              Développeur fullstack web et mobile basé à Montréal, avec plus de 3 ans
-              d&apos;expérience dans l&apos;écosystème JavaScript. Je conçois des applications
-              complètes — de l&apos;architecture backend (API REST, microservices, BFF) aux
-              interfaces performantes et soignées — avec un sens du produit adapté à des
-              enjeux réels de production.
+              Je conçois des applications web et mobile robustes, de l’architecture backend aux interfaces utilisateur, avec une approche orientée produit et qualité de code.
             </motion.p>
 
             <motion.div
@@ -119,6 +115,7 @@ export function Hero() {
                   src="/images/profileN.png"
                   alt="Aurel Noé Kenfack"
                   fill
+                  sizes="(max-width: 768px) 18rem, 24rem"
                   className="object-cover"
                   priority
                 />

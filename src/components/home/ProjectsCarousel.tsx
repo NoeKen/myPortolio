@@ -52,8 +52,8 @@ export function ProjectsCarousel() {
         </ProjectSwiper>
 
         {/* Bouton voir tout */}
-        <div className="mt-6 text-center">
-          <Link href={`/projects?cat=${category}`}>
+        {/* <div className="mt-6 text-center">
+          <Link href={`/Projects/#${categoryTitles[category]}`}>
             <Button
               variant="link"
               className="text-sm text-primary hover:underline"
@@ -61,7 +61,7 @@ export function ProjectsCarousel() {
               Voir tous les projets {categoryTitles[category].toLowerCase()}
             </Button>
           </Link>
-        </div>
+        </div> */}
       </div>
     );
   };

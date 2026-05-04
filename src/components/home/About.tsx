@@ -31,31 +31,49 @@ export function About() {
     {
       icon: Code,
       title: "Développement Fullstack",
-      text: "Spécialisé dans la conception d'applications web et mobile complètes — Node.js, TypeScript, React/Next.js — de l'API REST aux microservices, avec une attention particulière à la qualité du code et à la maintenabilité.",
+      text: "Spécialisé dans la conception d'applications web et mobile complètes - Node.js, TypeScript, React/Next.js - de l’API REST aux microservices, avec une attention particulière à la qualité du code, la maintenabilité et la performance en production.",
     },
     {
       icon: Server,
       title: "Architecture & DevOps",
-      text: "Expérience en containerisation Docker, pipelines CI/CD (GitHub Actions, Jenkins) et déploiement sur Vercel, Firebase et Google Cloud. À l'aise avec les environnements réglementés et le refactoring de code legacy.",
+      text: "Expérience en conteneurisation Docker, pipelines CI/CD (GitHub Actions, Jenkins) et déploiement cloud (Vercel, Firebase, GCP). Habitué aux environnements exigeants et à la structuration d’applications maintenables.",
     },
     {
       icon: Palette,
       title: "Design & Expérience utilisateur",
-      text: "Conception d'interfaces soignées et centrées utilisateur avec Figma et Adobe XD, alliant rigueur technique et sens du design pour livrer des produits fluides et cohérents.",
+      text: "Conception d’interfaces centrées utilisateur avec Figma et Adobe XD, en combinant rigueur technique et sens du produit pour livrer des expériences fluides et cohérentes.",
     },
   ];
 
   return (
-    <section id="about" className="py-16 md:py-24 bg-accent/20 relative overflow-hidden">
+    <section
+      id="about"
+      className="py-16 md:py-24 bg-accent/20 relative overflow-hidden"
+    >
       <SectionAnimation>
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tighter mb-4">À propos de moi</h2>
+            <h2 className="text-3xl font-bold tracking-tighter mb-4">
+              À propos de moi
+            </h2>
+            <h3 className="text-lg font-medium text-primary mb-4">
+              Une approche orientée produit, qualité et impact.
+            </h3>
             <p className="text-muted-foreground max-w-[700px]">
-              Développeur fullstack web & mobile basé à Montréal. Fort de plus de 3 ans
-              d&apos;expérience, je conçois des solutions numériques complètes pour des
-              startups, PME, associations et particuliers — du backend à l&apos;interface,
-              avec rigueur, sens du produit et respect des délais.
+              Développeur fullstack web et mobile basé à Montréal, j’accompagne
+              des startups, PME et organisations dans la conception et le
+              développement de solutions numériques complètes, de l’idée à la
+              mise en production. <br/><br/>J’interviens sur l’ensemble du cycle de
+              développement : analyse des besoins, architecture, développement,
+              déploiement et amélioration continue. Mon approche repose sur des
+              bases solides en qualité logicielle et en structuration des
+              projets, avec une attention particulière portée à la
+              maintenabilité et à la performance. <br/><br/>Au-delà du développement,
+              j’accorde une importance forte à l’expérience utilisateur et à la
+              compréhension des enjeux métiers, afin de livrer des produits
+              utiles, cohérents et adaptés aux besoins réels. Je peux travailler
+              de manière autonome ou m’intégrer à une équipe existante, selon la
+              nature et l’ampleur du projet.
             </p>
           </div>
 
@@ -84,7 +102,9 @@ export function About() {
                       >
                         <Icon className="h-6 w-6 text-primary" />
                       </motion.div>
-                      <h3 className="text-xl font-semibold mb-2">{card.title}</h3>
+                      <h3 className="text-xl font-semibold mb-2">
+                        {card.title}
+                      </h3>
                       <p className="text-muted-foreground">{card.text}</p>
                     </CardContent>
                   </Card>
