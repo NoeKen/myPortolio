@@ -1,4 +1,3 @@
-import Head from "next/head";
 import { Layout } from "@/components/layout/Layout";
 import { Formation } from "@/components/home/Formation";
 import { Badge } from "@/components/ui/badge";
@@ -6,19 +5,18 @@ import { Card, CardContent } from "@/components/ui/card";
 import { motion } from "framer-motion";
 import { Calendar, MapPin } from "lucide-react";
 import { experiences } from "@/datas/experiences";
+import { SeoHead } from "@/components/SeoHead";
 
 const staticCvUrl = "/docs/CV_Noe-Kenfack.pdf";
 
 export default function ExperiencePage() {
   return (
     <>
-      <Head>
-        <title>Expériences — Noé Kenfack</title>
-        <meta
-          name="description"
-          content="Parcours professionnel de Noé Kenfack — développeur fullstack web et mobile basé à Montréal."
-        />
-      </Head>
+      <SeoHead
+        title="Expérience | Développeur Fullstack à Montréal"
+        description="Expériences professionnelles en développement fullstack : React, Node.js, API REST, CI/CD, Docker, projets web et mobile."
+        canonical="/experience"
+      />
       <Layout cvUrl={staticCvUrl}>
         <section className="py-16 md:py-24">
           <div className="container px-4 md:px-6">

@@ -4,6 +4,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import projects from "@/datas/projects.json";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { SeoHead } from "@/components/SeoHead";
 
 type Category = "all" | "development" | "academic" | "design";
 
@@ -35,6 +36,11 @@ const Projects = () => {
 
   return (
     <>
+      <SeoHead
+        title="Projets | Applications web et mobile"
+        description="Découvrez mes projets en développement web et mobile : React, Next.js, Node.js, microservices et design UX."
+        canonical="/Projects"
+      />
       <Navbar cvUrl={staticCvUrl} />
       <section id="projects" className="py-16 md:py-24 bg-accent/20">
         <SectionAnimation>
