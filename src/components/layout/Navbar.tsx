@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X, Download, Moon, Sun } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { useTheme } from "next-themes";
 
 interface NavbarProps {
   cvUrl?: string;
@@ -10,10 +11,15 @@ interface NavbarProps {
 
 export function Navbar({ cvUrl }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const toggleTheme = () => setTheme(theme === "dark" ? "light" : "dark");
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -21,7 +27,7 @@ export function Navbar({ cvUrl }: NavbarProps) {
         <div className="flex items-center gap-2">
           <Link href="/" className="text-xl font-bold">
             <Image src="/images/logo.png" width={50} height={50} alt="Logo KLAN" className="h-8 w-auto rounded-md shadow-sm" />
-            <span className="sr-only">Accueil</span> {/* Accessibilité */}
+            <span className="sr-only">Accueil</span>
           </Link>
         </div>
 
@@ -63,6 +69,22 @@ export function Navbar({ cvUrl }: NavbarProps) {
           >
             Contact
           </Link>
+
+          {mounted && (
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
+              aria-label="Changer le thème"
+            >
+              {theme === "dark" ? (
+                <Sun className="h-4 w-4" />
+              ) : (
+                <Moon className="h-4 w-4" />
+              )}
+            </Button>
+          )}
+
           <Button variant="default" size="sm" asChild disabled={!cvUrl}>
             <a
               href={cvUrl || "#"}
@@ -76,14 +98,29 @@ export function Navbar({ cvUrl }: NavbarProps) {
           </Button>
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden"
-          onClick={toggleMenu}
-          aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Mobile: theme toggle + hamburger */}
+        <div className="md:hidden flex items-center gap-2">
+          {mounted && (
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
+              aria-label="Changer le thème"
+            >
+              {theme === "dark" ? (
+                <Sun className="h-4 w-4" />
+              ) : (
+                <Moon className="h-4 w-4" />
+              )}
+            </Button>
+          )}
+          <button
+            onClick={toggleMenu}
+            aria-label={isMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}

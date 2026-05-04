@@ -45,17 +45,7 @@
     "period": "Oct. 2025 – Jan. 2026",
     "institution": "Collège Bois-de-Boulogne"
   },
-  {
-    "id": 7,
-    "title": "Plateforme e-commerce — Stack Microsoft",
-    "description": "Plateforme e-commerce complète (catalogue, panier, commandes, authentification) avec ASP.NET MVC, Entity Framework et SQL Server.",
-    "images": [],
-    "tags": ["ASP.NET MVC", "C#", "Entity Framework", "SQL Server", "T-SQL"],
-    "category": "academic",
-    "githubUrl": "",
-    "period": "Août – Nov. 2025",
-    "institution": "Collège Bois-de-Boulogne"
-  },
+  
   {
     "id": 8,
     "title": "Logo pour entreprise de BTP",
