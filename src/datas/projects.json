@@ -15,8 +15,7 @@
     "title": "Suivi des Dépenses Personnelles",
     "description": "Application mobile pour suivre et analyser ses dépenses personnelles.",
     "images": [
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800",
-      "https://images.unsplash.com/photo-1580910051073-dc918f5f2447?w=800"
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"
     ],
     "tags": ["React Native", "SQLite", "Redux"],
     "liveUrl": "https://play.google.com/store/apps/details?id=com.beaware&pcampaignid=web_share",

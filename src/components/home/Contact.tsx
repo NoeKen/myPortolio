@@ -26,7 +26,7 @@ export function Contact() {
       >
         <h2 className="text-3xl font-bold tracking-tighter mb-4">Contact</h2>
         <p className="text-muted-foreground max-w-[700px]">
-          Vous avez un projet en tête ou souhaitez discuter d'une opportunité ? N'hésitez pas à me contacter.
+          Une opportunité d'emploi, un projet de site web pour votre entreprise ? Écrivez-moi.
         </p>
       </motion.div>
 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Menu, X, Download, Moon, Sun } from "lucide-react";
+import { useRouter } from "next/router";
+import { Menu, X, Download, Moon, Sun, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useTheme } from "next-themes";
@@ -13,6 +14,7 @@ export function Navbar({ cvUrl }: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  const isServicesPage = useRouter().pathname === "/services";
 
   useEffect(() => {
     setMounted(true);
@@ -91,17 +93,26 @@ export function Navbar({ cvUrl }: NavbarProps) {
             </Button>
           )}
 
-          <Button variant="default" size="sm" className="whitespace-nowrap shrink-0" asChild disabled={!cvUrl}>
-            <a
-              href={cvUrl || "#"}
-              target={cvUrl ? "_blank" : undefined}
-              rel={cvUrl ? "noopener noreferrer" : undefined}
-              download={cvUrl ? "CV_Noe Kenfack.pdf" : undefined}
-            >
-              <Download className="mr-2 h-4 w-4" />
-              Télécharger CV
-            </a>
-          </Button>
+          {isServicesPage ? (
+            <Button variant="default" size="sm" className="whitespace-nowrap shrink-0" asChild>
+              <a href="#maquette">
+                <Send className="mr-2 h-4 w-4" />
+                Demander ma maquette
+              </a>
+            </Button>
+          ) : (
+            <Button variant="default" size="sm" className="whitespace-nowrap shrink-0" asChild disabled={!cvUrl}>
+              <a
+                href={cvUrl || "#"}
+                target={cvUrl ? "_blank" : undefined}
+                rel={cvUrl ? "noopener noreferrer" : undefined}
+                download={cvUrl ? "CV_Noe Kenfack.pdf" : undefined}
+              >
+                <Download className="mr-2 h-4 w-4" />
+                Télécharger CV
+              </a>
+            </Button>
+          )}
         </nav>
 
         {/* Mobile: theme toggle + hamburger */}
@@ -182,23 +193,32 @@ export function Navbar({ cvUrl }: NavbarProps) {
             >
               Contact
             </Link>
-            <Button
-              variant="default"
-              size="sm"
-              className="w-full"
-              asChild
-              disabled={!cvUrl}
-            >
-              <a
-                href={cvUrl || "#"}
-                target={cvUrl ? "_blank" : undefined}
-                rel={cvUrl ? "noopener noreferrer" : undefined}
-                download={cvUrl ? "CV_Noe Kenfack.pdf" : undefined}
+            {isServicesPage ? (
+              <Button variant="default" size="sm" className="w-full" asChild>
+                <a href="#maquette" onClick={toggleMenu}>
+                  <Send className="mr-2 h-4 w-4" />
+                  Demander ma maquette
+                </a>
+              </Button>
+            ) : (
+              <Button
+                variant="default"
+                size="sm"
+                className="w-full"
+                asChild
+                disabled={!cvUrl}
               >
-                <Download className="mr-2 h-4 w-4" />
-                Télécharger CV
-              </a>
-            </Button>
+                <a
+                  href={cvUrl || "#"}
+                  target={cvUrl ? "_blank" : undefined}
+                  rel={cvUrl ? "noopener noreferrer" : undefined}
+                  download={cvUrl ? "CV_Noe Kenfack.pdf" : undefined}
+                >
+                  <Download className="mr-2 h-4 w-4" />
+                  Télécharger CV
+                </a>
+              </Button>
+            )}
           </nav>
         </div>
       )}

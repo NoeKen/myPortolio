@@ -2,7 +2,7 @@ import { Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
-import { formatPrice, type ServicePlan } from "@/datas/services";
+import { formatPrice, taxNote, type ServicePlan } from "@/datas/services";
 
 interface PlanCardProps {
   plan: ServicePlan;
@@ -36,7 +36,8 @@ export function PlanCard({ plan, variant, onChoose }: PlanCardProps) {
               <p className="text-sm text-muted-foreground">à partir de</p>
               <p className="text-3xl font-bold">{formatPrice(plan.price)}</p>
               <p className="text-sm text-muted-foreground">
-                {plan.priceSuffix ? `${plan.priceSuffix} · ` : ""}taxes en sus
+                {plan.priceSuffix ? `${plan.priceSuffix} · ` : ""}
+                {taxNote}
               </p>
             </div>
             <ul className="space-y-2 text-sm">

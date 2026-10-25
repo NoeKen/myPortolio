@@ -1,14 +1,22 @@
 import { Check } from "lucide-react";
 import { SectionAnimation } from "@/components/animations/SectionAnimation";
 import { PlanCard } from "@/components/services/PlanCard";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { formatPrice, servicePlans, type ServicePlan } from "@/datas/services";
+import {
+  formatPrice,
+  serviceOptions,
+  servicePlans,
+  taxNote,
+  type ServicePlan,
+} from "@/datas/services";
 
 interface PlansGridProps {
   onChoose: (plan: ServicePlan) => void;
+  onRequest: (subject: string) => void;
 }
 
-export function PlansGrid({ onChoose }: PlansGridProps) {
+export function PlansGrid({ onChoose, onRequest }: PlansGridProps) {
   const oneOff = servicePlans.filter((plan) => plan.id !== "entretien");
   const maintenance = servicePlans.find((plan) => plan.id === "entretien");
 
@@ -37,8 +45,13 @@ export function PlansGrid({ onChoose }: PlansGridProps) {
             ))}
           </div>
 
+          <p className="mt-8 text-center text-muted-foreground">
+            Pas sûr du forfait ? Demandez la maquette gratuite : on choisira
+            ensemble ce qui convient à votre entreprise.
+          </p>
+
           {maintenance && (
-            <Card className="mt-6" data-plan={maintenance.id}>
+            <Card className="mt-8" data-plan={maintenance.id}>
               <CardContent className="flex flex-col md:flex-row md:items-center gap-6 pt-6">
                 <div className="md:w-1/3">
                   <h3 className="text-xl font-semibold">{maintenance.name}</h3>
@@ -49,7 +62,7 @@ export function PlansGrid({ onChoose }: PlansGridProps) {
                       {maintenance.priceSuffix}
                     </span>
                   </p>
-                  <p className="text-sm text-muted-foreground">taxes en sus</p>
+                  <p className="text-sm text-muted-foreground">{taxNote}</p>
                 </div>
                 <ul className="grid gap-2 sm:grid-cols-2 md:flex-1">
                   {maintenance.features.map((feature) => (
@@ -62,6 +75,49 @@ export function PlansGrid({ onChoose }: PlansGridProps) {
               </CardContent>
             </Card>
           )}
+
+          <Card className="mt-6">
+            <CardContent className="pt-6">
+              <h3 className="text-xl font-semibold mb-4">Options</h3>
+              <div className="grid gap-6 md:grid-cols-2">
+                {serviceOptions.map((option) => (
+                  <div
+                    key={option.id}
+                    data-option={option.id}
+                    className="flex flex-col gap-2"
+                  >
+                    <h4 className="font-semibold">{option.name}</h4>
+                    <p className="text-sm">
+                      {option.onQuote && "Sur soumission, "}
+                      {option.onQuote ? "à partir de " : "À partir de "}
+                      <span className="font-semibold">
+                        {formatPrice(option.price)}
+                      </span>
+                      <span className="text-muted-foreground"> · {taxNote}</span>
+                    </p>
+                    <p className="text-sm text-muted-foreground">
+                      {option.description}
+                    </p>
+                    {option.note && (
+                      <p className="text-xs text-muted-foreground">
+                        {option.note}
+                      </p>
+                    )}
+                    {option.cta && (
+                      <Button
+                        type="button"
+                        variant="outline"
+                        className="mt-2 w-fit"
+                        onClick={() => onRequest(option.cta!.subject)}
+                      >
+                        {option.cta.label}
+                      </Button>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </SectionAnimation>
     </section>
