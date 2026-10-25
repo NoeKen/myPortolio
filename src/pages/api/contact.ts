@@ -1,12 +1,13 @@
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import * as z from "zod";
+import { Resend } from "resend";
 
 const contactFormSchema = z.object({
-  name: z.string().min(2, { message: "Le nom doit contenir au moins 2 caractères." }),
+  name: z.string().min(2, { message: "Le nom doit contenir au moins 2 caractères." }).max(100, { message: "Le nom doit contenir au plus 100 caractères." }),
   email: z.string().email({ message: "Veuillez entrer une adresse email valide." }),
-  subject: z.string().min(3, { message: "Le sujet doit contenir au moins 3 caractères." }),
-  message: z.string().min(10, { message: "Le message doit contenir au moins 10 caractères." }),
+  subject: z.string().min(3, { message: "Le sujet doit contenir au moins 3 caractères." }).max(150, { message: "Le sujet doit contenir au plus 150 caractères." }),
+  message: z.string().min(10, { message: "Le message doit contenir au moins 10 caractères." }).max(5000, { message: "Le message doit contenir au plus 5000 caractères." }),
 });
 
 export default async function handler(
@@ -17,12 +18,32 @@ export default async function handler(
     try {
       const validatedData = contactFormSchema.parse(req.body);
       
-      // TODO: Implement actual message sending (e.g., email) or storage here.
-      // For now, we just log it to the server console.
-      console.log("Nouveau message de contact reçu:", validatedData);
+      const apiKey = process.env.RESEND_API_KEY;
+      const toEmail = process.env.CONTACT_TO_EMAIL;
+      if (!apiKey || !toEmail) {
+        console.error("API Contact: RESEND_API_KEY ou CONTACT_TO_EMAIL manquant.");
+        return res.status(500).json({ message: "Le service d'envoi n'est pas configuré." });
+      }
 
-      // Simulate successful processing for "realtime" feel on the frontend
-      res.status(200).json({ message: "Message envoyé avec succès !" });
+      const { name, email, subject, message } = validatedData;
+      const text = `Nom : ${name}\nCourriel : ${email}\n\n${message}`;
+
+      const { error } = await new Resend(apiKey).emails.send({
+        from: "Portfolio <onboarding@resend.dev>",
+        to: toEmail,
+        replyTo: email,
+        subject: `[Portfolio] ${subject.replace(/[\r\n]+/g, " ")}`,
+        text,
+      });
+
+      if (error) {
+        console.error("API Contact Resend Error:", error);
+        return res.status(500).json({
+          message: "L'envoi a échoué. Écrivez-moi directement à kenfackaurel1@gmail.com.",
+        });
+      }
+
+      return res.status(200).json({ message: "Message envoyé avec succès !" });
 
     } catch (error) {
       if (error instanceof z.ZodError) {

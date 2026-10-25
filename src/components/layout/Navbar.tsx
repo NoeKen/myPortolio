@@ -32,7 +32,7 @@ export function Navbar({ cvUrl }: NavbarProps) {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-6">
           <Link
             href="/"
             className="text-sm font-medium hover:text-primary transition-colors"
@@ -64,6 +64,12 @@ export function Navbar({ cvUrl }: NavbarProps) {
             Projets
           </Link>
           <Link
+            href="/services"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
+            Services
+          </Link>
+          <Link
             href="/#contact"
             className="text-sm font-medium hover:text-primary transition-colors"
           >
@@ -85,7 +91,7 @@ export function Navbar({ cvUrl }: NavbarProps) {
             </Button>
           )}
 
-          <Button variant="default" size="sm" asChild disabled={!cvUrl}>
+          <Button variant="default" size="sm" className="whitespace-nowrap shrink-0" asChild disabled={!cvUrl}>
             <a
               href={cvUrl || "#"}
               target={cvUrl ? "_blank" : undefined}
@@ -99,7 +105,7 @@ export function Navbar({ cvUrl }: NavbarProps) {
         </nav>
 
         {/* Mobile: theme toggle + hamburger */}
-        <div className="md:hidden flex items-center gap-2">
+        <div className="lg:hidden flex items-center gap-2">
           {mounted && (
             <Button
               variant="ghost"
@@ -125,7 +131,7 @@ export function Navbar({ cvUrl }: NavbarProps) {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden p-4 bg-background border-b border-border/40">
+        <div className="lg:hidden p-4 bg-background border-b border-border/40">
           <nav className="flex flex-col space-y-4">
             <Link
               href="/"
@@ -161,6 +167,13 @@ export function Navbar({ cvUrl }: NavbarProps) {
               onClick={toggleMenu}
             >
               Projets
+            </Link>
+            <Link
+              href="/services"
+              className="text-sm font-medium hover:text-primary transition-colors"
+              onClick={toggleMenu}
+            >
+              Services
             </Link>
             <Link
               href="/#contact"
