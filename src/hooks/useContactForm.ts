@@ -13,11 +13,17 @@ const contactFormSchema = z.object({
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
-export function useContactForm() {
+export function useContactForm(options?: { defaultSubject?: string }) {
   const [isLoading, setIsLoading] = useState(false);
 
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      subject: options?.defaultSubject ?? "",
+      message: "",
+    },
   });
 
   const onSubmit = async (formData: ContactFormValues) => {

@@ -64,6 +64,12 @@ export function Navbar({ cvUrl }: NavbarProps) {
             Projets
           </Link>
           <Link
+            href="/services"
+            className="text-sm font-medium hover:text-primary transition-colors"
+          >
+            Services
+          </Link>
+          <Link
             href="/#contact"
             className="text-sm font-medium hover:text-primary transition-colors"
           >
@@ -161,6 +167,13 @@ export function Navbar({ cvUrl }: NavbarProps) {
               onClick={toggleMenu}
             >
               Projets
+            </Link>
+            <Link
+              href="/services"
+              className="text-sm font-medium hover:text-primary transition-colors"
+              onClick={toggleMenu}
+            >
+              Services
             </Link>
             <Link
               href="/#contact"
