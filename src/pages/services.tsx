@@ -34,6 +34,14 @@ const jsonLd = {
       name: plan.name,
       price: String(plan.price),
       priceCurrency: "CAD",
+      ...(plan.priceSuffix && {
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          price: String(plan.price),
+          priceCurrency: "CAD",
+          unitCode: "MON",
+        },
+      }),
     })),
   },
 };
@@ -45,7 +53,13 @@ export default function ServicesPage() {
     contact.form.setValue("subject", `Maquette gratuite — forfait ${plan.name}`, {
       shouldValidate: true,
     });
-    document.getElementById("maquette")?.scrollIntoView({ behavior: "smooth" });
+    const reduceMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    document
+      .getElementById("maquette")
+      ?.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
+    contact.form.setFocus("name", { shouldSelect: false });
   };
 
   return (

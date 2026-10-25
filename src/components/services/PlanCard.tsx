@@ -1,7 +1,7 @@
 import { Check } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { formatPrice, type ServicePlan } from "@/datas/services";
 
 interface PlanCardProps {
@@ -22,7 +22,9 @@ export function PlanCard({ plan, variant, onChoose }: PlanCardProps) {
         {plan.featured && (
           <Badge className="w-fit mb-2">Le plus populaire</Badge>
         )}
-        <CardTitle>{plan.name}</CardTitle>
+        <h3 className="font-semibold leading-none tracking-tight">
+          {plan.name}
+        </h3>
         <p className="text-muted-foreground">{plan.tagline}</p>
       </CardHeader>
       <CardContent className="flex flex-1 flex-col gap-4">

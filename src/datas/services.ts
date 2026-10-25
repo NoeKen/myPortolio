@@ -155,5 +155,5 @@ export const faq: FaqItem[] = [
 ];
 
 export function formatPrice(price: number): string {
-  return price.toLocaleString("fr-CA") + " $";
+  return price.toLocaleString("fr-CA") + "\u00a0$";
 }

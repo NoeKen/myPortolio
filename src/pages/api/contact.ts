@@ -4,10 +4,10 @@ import * as z from "zod";
 import { Resend } from "resend";
 
 const contactFormSchema = z.object({
-  name: z.string().min(2, { message: "Le nom doit contenir au moins 2 caractères." }),
+  name: z.string().min(2, { message: "Le nom doit contenir au moins 2 caractères." }).max(100, { message: "Le nom doit contenir au plus 100 caractères." }),
   email: z.string().email({ message: "Veuillez entrer une adresse email valide." }),
-  subject: z.string().min(3, { message: "Le sujet doit contenir au moins 3 caractères." }),
-  message: z.string().min(10, { message: "Le message doit contenir au moins 10 caractères." }),
+  subject: z.string().min(3, { message: "Le sujet doit contenir au moins 3 caractères." }).max(150, { message: "Le sujet doit contenir au plus 150 caractères." }),
+  message: z.string().min(10, { message: "Le message doit contenir au moins 10 caractères." }).max(5000, { message: "Le message doit contenir au plus 5000 caractères." }),
 });
 
 export default async function handler(
@@ -32,7 +32,7 @@ export default async function handler(
         from: "Portfolio <onboarding@resend.dev>",
         to: toEmail,
         replyTo: email,
-        subject: `[Portfolio] ${subject}`,
+        subject: `[Portfolio] ${subject.replace(/[\r\n]+/g, " ")}`,
         text,
       });
 
