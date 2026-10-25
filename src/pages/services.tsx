@@ -3,6 +3,7 @@ import { Layout } from "@/components/layout/Layout";
 import { SeoHead } from "@/components/SeoHead";
 import { ServicesHero } from "@/components/services/ServicesHero";
 import { PlansGrid } from "@/components/services/PlansGrid";
+import { ShowcaseSection } from "@/components/services/ShowcaseSection";
 import { ProcessSteps } from "@/components/services/ProcessSteps";
 import { IncludedList } from "@/components/services/IncludedList";
 import { ServicesFaq } from "@/components/services/ServicesFaq";
@@ -49,10 +50,11 @@ const jsonLd = {
 export default function ServicesPage() {
   const contact = useContactForm({ defaultSubject: "Maquette gratuite" });
 
-  const handleChoose = (plan: ServicePlan) => {
-    contact.form.setValue("subject", `Maquette gratuite — forfait ${plan.name}`, {
-      shouldValidate: true,
-    });
+  const handleChoose = (plan: ServicePlan) =>
+    requestWithSubject(`Maquette gratuite — forfait ${plan.name}`);
+
+  const requestWithSubject = (subject: string) => {
+    contact.form.setValue("subject", subject, { shouldValidate: true });
     const reduceMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
@@ -78,7 +80,8 @@ export default function ServicesPage() {
 
       <Layout cvUrl={staticCvUrl}>
         <ServicesHero />
-        <PlansGrid onChoose={handleChoose} />
+        <PlansGrid onChoose={handleChoose} onRequest={requestWithSubject} />
+        <ShowcaseSection />
         <ProcessSteps />
         <IncludedList />
         <ServicesFaq />

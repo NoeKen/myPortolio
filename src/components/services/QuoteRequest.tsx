@@ -28,7 +28,7 @@ export function QuoteRequest({
   onSubmit,
 }: ReturnType<typeof useContactForm>) {
   return (
-    <section id="maquette" className="py-16 md:py-24 scroll-mt-20 bg-accent/20">
+    <section id="maquette" className="py-16 md:py-24 scroll-mt-20">
       <SectionAnimation>
         <div className="container px-4 md:px-6">
           <div className="flex flex-col items-center text-center mb-12">

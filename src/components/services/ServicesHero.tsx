@@ -14,9 +14,14 @@ export function ServicesHero() {
           <h1 className="text-3xl md:text-5xl font-bold tracking-tighter mb-4 max-w-[800px]">
             Un site web qui fait appeler vos clients
           </h1>
-          <p className="text-muted-foreground max-w-[700px] mb-8">
+          <p className="text-muted-foreground max-w-[700px] mb-3">
             Sites vitrines et landing pages pour les PME du Québec, livrés en
             quelques semaines à prix abordable.
+          </p>
+          <p className="text-sm text-muted-foreground max-w-[700px] mb-8">
+            Entrepreneurs en construction et rénovation, restaurants, cliniques,
+            commerces et services professionnels, partout au Québec, en personne
+            à Montréal ou à distance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild size="lg">
