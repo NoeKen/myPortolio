@@ -32,11 +32,10 @@ export const servicePlans: ServicePlan[] = [
       "Une page pensée pour transformer vos visiteurs en demandes, prête pour vos publicités Facebook ou Google.",
     price: 800,
     features: [
-      "une page pensée pour transformer les visiteurs en demandes",
-      "texte, photos et appel à l'action",
-      "formulaire relié à votre courriel",
-      "prête pour vos publicités Facebook ou Google",
-      "livrée en 5 jours ouvrables",
+      "Une page pensée pour transformer les visiteurs en demandes",
+      "Texte, photos et appel à l'action",
+      "Formulaire relié à votre courriel",
+      "Prête pour vos publicités Facebook ou Google",
     ],
     delay: "Livrée en 5 jours ouvrables",
   },
@@ -48,12 +47,11 @@ export const servicePlans: ServicePlan[] = [
       "Un site vitrine de 4 à 5 pages, adapté au cellulaire, avec formulaire de soumission et fiche Google.",
     price: 1500,
     features: [
-      "site vitrine de 4 à 5 pages (accueil, services, réalisations, à propos, contact)",
-      "galerie de photos de vos réalisations",
-      "formulaire de demande de soumission",
-      "adapté au cellulaire",
-      "fiche Google Business et référencement local de base",
-      "livré en 2 semaines",
+      "Site vitrine de 4 à 5 pages (accueil, services, réalisations, à propos, contact)",
+      "Galerie de photos de vos réalisations",
+      "Formulaire de demande de soumission",
+      "Adapté au cellulaire",
+      "Fiche Google Business et référencement local de base",
     ],
     delay: "Livré en 2 semaines",
     featured: true,
@@ -66,12 +64,11 @@ export const servicePlans: ServicePlan[] = [
       "Tout l'Essentiel, plus une page par service, les avis Google et un site bilingue.",
     price: 2500,
     features: [
-      "tout le forfait Essentiel",
-      "une page dédiée par service (référencement local)",
-      "avis clients Google intégrés",
-      "site bilingue",
-      "statistiques de visites et de demandes",
-      "livré en 3 semaines",
+      "Tout le forfait Essentiel",
+      "Une page dédiée par service (référencement local)",
+      "Avis clients Google intégrés",
+      "Site bilingue",
+      "Statistiques de visites et de demandes",
     ],
     delay: "Livré en 3 semaines",
   },
@@ -84,12 +81,12 @@ export const servicePlans: ServicePlan[] = [
     price: 60,
     priceSuffix: "/ mois",
     features: [
-      "hébergement",
-      "nom de domaine",
-      "copies de sécurité",
-      "mises à jour",
-      "jusqu'à 30 minutes de modifications par mois",
-      "sans contrat, annulable en tout temps",
+      "Hébergement",
+      "Nom de domaine",
+      "Copies de sécurité",
+      "Mises à jour",
+      "Jusqu'à 30 minutes de modifications par mois",
+      "Sans contrat, annulable en tout temps",
     ],
   },
 ];
@@ -119,20 +116,20 @@ export const processSteps: ProcessStep[] = [
 
 export const included: string[] = [
   "2 rondes de révisions",
-  "rédaction des textes à partir de vos informations",
-  "certificat de sécurité (HTTPS)",
-  "le site vous appartient",
+  "Rédaction des textes à partir de vos informations",
+  "Certificat de sécurité (HTTPS)",
+  "Le site vous appartient",
 ];
 
 export const notIncluded: string[] = [
-  "séance photo professionnelle",
-  "boutique en ligne",
-  "gestion de vos publicités",
-  "rédaction d'articles de blogue",
+  "Séance photo professionnelle",
+  "Boutique en ligne",
+  "Gestion de vos publicités",
+  "Rédaction d'articles de blogue",
 ];
 
 export const paymentTerms: string =
-  "50 % à la signature, 50 % à la mise en ligne. La maquette de votre page d'accueil est gratuite, avant tout engagement. Les taxes (TPS et TVQ) s'ajoutent.";
+  "50 % à la signature, 50 % à la mise en ligne. La maquette de votre page d'accueil est gratuite, avant tout engagement. Les taxes (TPS et TVQ) s'ajoutent.";
 
 export const faq: FaqItem[] = [
   {
