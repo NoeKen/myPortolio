@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import { ThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/toaster";
+import { Toaster as SonnerToaster } from "@/components/ui/sonner";
 import { FloatingElements } from "@/components/animations/FloatingElements";
 import { AnimatePresence } from "framer-motion";
 import { Analytics } from "@vercel/analytics/next";
@@ -15,6 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Analytics />
       <FloatingElements />
       <Toaster />
+      <SonnerToaster />
     </ThemeProvider>
   );
 }

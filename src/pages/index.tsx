@@ -4,6 +4,7 @@ import { Hero } from "@/components/home/Hero";
 import { About } from "@/components/home/About";
 import { Skills } from "@/components/home/Skills";
 import { Contact } from "@/components/home/Contact";
+import { ServicesPreview } from "@/components/home/ServicesPreview";
 import { ProjectsSection } from "@/components/projects/ProjectsSection";
 import { Experience } from "@/components/home/Experience";
 import { Formation } from "@/components/home/Formation";
@@ -65,6 +66,7 @@ export default function Home() {
         <Formation />
         <ProjectsSection mode="carousel" />
         {/* <Projects /> */}
+        <ServicesPreview />
         <Contact />
       </Layout>
     </>
